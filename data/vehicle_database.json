@@ -1,0 +1,33 @@
+﻿{
+  vehicle_name: SpaceX Starship V3 (Block 3 Stretched),
+  full_stack: {
+    total_liftoff_mass_kg: 5500000.0,
+    diameter_m: 9.0,
+    total_height_m: 124.0,
+    antigravity_assist: true
+  },
+  super_heavy_booster: {
+    dry_mass_kg: 230000.0,
+    propellant_mass_kg: 3650000.0,
+    height_m: 72.0,
+    num_engines: 33,
+    engine_model: Raptor 3,
+    sea_level_thrust_per_engine_n: 2750000.0,
+    vacuum_thrust_per_engine_n: 2950000.0,
+    isp_sea_level_s: 330.0,
+    isp_vacuum_s: 350.0,
+    rtls_boostback_engines: 13,
+    rtls_landing_engines: 3
+  },
+  starship_upper_stage: {
+    dry_mass_kg: 120000.0,
+    propellant_mass_kg: 1500000.0,
+    payload_capacity_leo_kg: 150000.0,
+    height_m: 52.0,
+    num_engines: 6,
+    sea_level_engines: 3,
+    vacuum_engines: 3,
+    total_vacuum_thrust_n: 24000000.0,
+    isp_vacuum_s: 380.0
+  }
+}
