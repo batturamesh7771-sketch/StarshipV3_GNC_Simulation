@@ -1,0 +1,31 @@
+﻿{
+  simulation: {
+    dt: 0.05,
+    t_max: 450.0,
+    staging_time: 140.0,
+    integration_scheme: RK4
+  },
+  orbit_target: {
+    altitude_km: 250.0,
+    velocity_ms: 7752.0,
+    inclination_deg: 28.5
+  },
+  guidance: {
+    closed_loop_interval_s: 1.0,
+    max_q_threshold_pa: 32000.0,
+    max_q_throttle: 0.70,
+    full_throttle: 1.00
+  },
+  actuator: {
+    natural_frequency_rad_s: 25.0,
+    damping_ratio: 0.70,
+    time_constant_tau_s: 0.08,
+    max_slew_rate_deg_s: 10.0,
+    gimbal_limit_deg: 5.0
+  },
+  antigravity_module: {
+    gamma_phase1: 1.20,
+    gamma_phase2_transition: linear_ramp_down,
+    gamma_phase3: 0.00
+  }
+}
