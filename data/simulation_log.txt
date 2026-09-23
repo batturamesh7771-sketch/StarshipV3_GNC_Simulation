@@ -1,0 +1,442 @@
+=====================================================================
+   SPACEX STARSHIP V3 ASCENT GNC SIMULATION PLATFORM INITIALIZING    
+=====================================================================
+[T+000.0s] Liftoff! 33 Raptor 3 engines ignited at 85% throttle. AGM active at gamma = 1.2
+[T+140.0s] MECO & Hot-Staging! Booster separated. Upper Stage Raptor engines ignited.
+[T+314.9s] SECO / Orbital Insertion Achieved! Target speed 7,752 m/s reached.
+
+=====================================================================
+           STARSHIP V3 ASCENT GNC MISSION SUMMARY REPORT             
+=====================================================================
+ - Total Burn Duration           :  314.86 s
+ - Staging Time (MECO)           :  140.00 s
+ - Insertion Altitude            :  248.34 km (Target: 250.00 km, Err:  1.66 km)
+ - Insertion Orbital Velocity    : 7752.90 m/s (Target: 7752.0 m/s, Err:  0.90 m/s)
+ - Final Radial (Vertical) Speed :  +90.01 m/s
+ - Final Tangential (Horiz) Speed: 7752.38 m/s
+ - Upper Stage Propellant Left   : 152697.3 kg (11.93 % remaining)
+ - Max Dynamic Pressure (Max-Q)  :  529.87 kPa at T+000.0s (Alt:  0.00 km)
+ - Navigation State EKF Variance :  0.0075 m^2 (Mean Pos Err: 0.138 m)
+ - Orbit Insertion Status        : SUCCESSFUL (LEO Target Circular Orbit Reached)
+=====================================================================
+[SUCCESS] Telemetry dashboard successfully saved to: C:\Users\user\.gemini\antigravity\scratch\StarshipV3_GNC_Simulation\StarshipV3_Ascent_Telemetry.png
+=====================================================================
+   SPACEX STARSHIP V3 ASCENT GNC SIMULATION PLATFORM INITIALIZING    
+=====================================================================
+[T+000.0s] Liftoff! 33 Raptor 3 engines ignited at 85% throttle. AGM active at gamma = 1.2
+{Unrecognized function or variable 'rho'.
+
+Error in MasterAscentSimulator (line 140)
+    qbar = 0.5 * rho * (v_rel^2);
+                 ^^^
+} 
+=====================================================================
+   SPACEX STARSHIP V3 ASCENT GNC SIMULATION PLATFORM INITIALIZING    
+=====================================================================
+[T+000.0s] Liftoff! 33 Raptor 3 engines ignited at 85% throttle. AGM active at gamma = 1.2
+[T+140.0s] MECO & Hot-Staging! Booster separated. Upper Stage Raptor engines ignited.
+[T+314.7s] SECO / Orbital Insertion Achieved! Target speed 7,752 m/s reached.
+
+=====================================================================
+           STARSHIP V3 ASCENT GNC MISSION SUMMARY REPORT             
+=====================================================================
+ - Total Burn Duration           :  314.66 s
+ - Staging Time (MECO)           :  140.00 s
+ - Insertion Altitude            :  248.32 km (Target: 250.00 km, Err:  1.68 km)
+ - Insertion Orbital Velocity    : 7752.55 m/s (Target: 7752.0 m/s, Err:  0.55 m/s)
+ - Final Radial (Vertical) Speed :  +83.54 m/s
+ - Final Tangential (Horiz) Speed: 7752.10 m/s
+ - Upper Stage Propellant Left   : 153986.6 kg (12.03 % remaining)
+ - Max Dynamic Pressure (Max-Q)  :   68.01 kPa at T+032.2s (Alt:  8.88 km)
+ - Navigation State EKF Variance :  0.0075 m^2 (Mean Pos Err: 0.138 m)
+ - Orbit Insertion Status        : SUCCESSFUL (LEO Target Circular Orbit Reached)
+=====================================================================
+[SUCCESS] Telemetry dashboard successfully saved to: C:\Users\user\.gemini\antigravity\scratch\StarshipV3_GNC_Simulation\StarshipV3_Ascent_Telemetry.png
+=====================================================================
+   SPACEX STARSHIP V3 ASCENT GNC SIMULATION PLATFORM INITIALIZING    
+=====================================================================
+[T+000.0s] Liftoff! 33 Raptor 3 engines ignited at 85% throttle. AGM active at gamma = 1.2
+[T+140.0s] MECO & Hot-Staging! Booster separated. Upper Stage Raptor engines ignited.
+[T+314.7s] SECO / Orbital Insertion Achieved! Target speed 7,752 m/s reached.
+
+=====================================================================
+           STARSHIP V3 ASCENT GNC MISSION SUMMARY REPORT             
+=====================================================================
+ - Total Burn Duration           :  314.66 s
+ - Staging Time (MECO)           :  140.00 s
+ - Insertion Altitude            :  248.32 km (Target: 250.00 km, Err:  1.68 km)
+ - Insertion Orbital Velocity    : 7752.55 m/s (Target: 7752.0 m/s, Err:  0.55 m/s)
+ - Final Radial (Vertical) Speed :  +83.54 m/s
+ - Final Tangential (Horiz) Speed: 7752.10 m/s
+ - Upper Stage Propellant Left   : 153986.6 kg (12.03 % remaining)
+ - Max Dynamic Pressure (Max-Q)  :   68.01 kPa at T+032.2s (Alt:  8.88 km)
+ - Navigation State EKF Variance :  0.0075 m^2 (Mean Pos Err: 0.138 m)
+ - Orbit Insertion Status        : SUCCESSFUL (LEO Target Circular Orbit Reached)
+=====================================================================
+[SUCCESS] Telemetry dashboard successfully saved to: C:\Users\user\.gemini\antigravity\scratch\StarshipV3_GNC_Simulation\StarshipV3_Ascent_Telemetry.png
+=====================================================================
+  STARSHIP V3 3D REAL-TIME MISSION CONTROL PLATFORM INITIALIZING     
+=====================================================================
+[INITIALIZATION] Building 3D geometry and multi-viewport mission control...
+{Error using camlight (line 62)
+Invalid arguments
+
+Error in Starship3DVisualizer/initDashboard (line 89)
+            camlight(obj.ax3D, [-45, 30]);
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in Starship3DVisualizer (line 61)
+            obj.initDashboard();
+            ^^^^^^^^^^^^^^^^^^^
+Error in MasterAscentSimulator (line 24)
+visualizer = Starship3DVisualizer();
+             ^^^^^^^^^^^^^^^^^^^^^^
+} 
+=====================================================================
+  STARSHIP V3 3D REAL-TIME MISSION CONTROL PLATFORM INITIALIZING     
+=====================================================================
+[INITIALIZATION] Building 3D geometry and multi-viewport mission control...
+[T+000.0s] Ignition! 33 Raptor 3 engines active. Antigravity Module set to gamma = 1.20
+{Error using makehgtform (line 218)
+Unknown transform type: xscale
+
+Error in Starship3DVisualizer/update (line 342)
+                set(obj.tformFlameBooster, 'Matrix', makehgtform('xscale', flameJitter, 'yscale', flameJitter, 'zscale', flameJitter));
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in MasterAscentSimulator (line 162)
+    visualizer.update(t, [px; py; pz], [vx; vy; vz], currentPitchDeg, gamma_agm, propRemaining, phase_num, isCutoff);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+=====================================================================
+  STARSHIP V3 3D REAL-TIME MISSION CONTROL PLATFORM INITIALIZING     
+=====================================================================
+[INITIALIZATION] Building 3D geometry and multi-viewport mission control...
+[T+000.0s] Ignition! 33 Raptor 3 engines active. Antigravity Module set to gamma = 1.20
+[T+140.0s] STAGING EVENT: Booster decoupled! Starship Vacuum Raptors ignited.
+=====================================================================
+  STARSHIP V3 3D REAL-TIME MISSION CONTROL PLATFORM INITIALIZING     
+=====================================================================
+[INITIALIZATION] Building 3D geometry and multi-viewport mission control...
+[T+000.0s] Ignition! 33 Raptor 3 engines active. Antigravity Module set to gamma = 1.20
+[T+140.0s] STAGING EVENT: Booster decoupled! Starship Vacuum Raptors ignited.
+
+=====================================================================
+        STARSHIP V3 3D ASCENT MISSION EXECUTION COMPLETED            
+=====================================================================
+ - Final Mission Elapsed Time   :  338.60 s
+ - Final Orbit Altitude         :  163.76 km (Target: 250.00 km)
+ - Final Orbital Speed          : 10646.94 m/s (Target: 7752.0 m/s)
+ - Upper Stage Reserve Fuel     :     0.0 kg
+ - Booster Separation           : EXECUTED CLEANLY AT T+140.0s
+ - Satellite Deployment Status  : DEPLOYED INTO TARGET CIRCULAR ORBIT
+=====================================================================
+[SUCCESS] 3D Mission Control Dashboard saved to: StarshipV3_3D_Mission_Success.png
+[COMPLETE] Simulation finished. Interactive 3D Mission Control active.
+=====================================================================
+  STARSHIP V3 3D REAL-TIME MISSION CONTROL PLATFORM INITIALIZING     
+=====================================================================
+[INITIALIZATION] Building 3D geometry and multi-viewport mission control...
+[T+000.0s] Ignition! 33 Raptor 3 engines active. Antigravity Module set to gamma = 1.20
+[T+140.0s] STAGING EVENT: Booster decoupled! Starship Vacuum Raptors ignited.
+[T+313.4s] SECO & ORBIT INSERTION! Speed: 7757.7 m/s, Altitude: 248.17 km
+[T+313.4s] PAYLOAD DEPLOYMENT SEQUENCE COMMENCED!
+
+=====================================================================
+        STARSHIP V3 3D ASCENT MISSION EXECUTION COMPLETED            
+=====================================================================
+ - Final Mission Elapsed Time   :  323.40 s
+ - Final Orbit Altitude         :  249.53 km (Target: 250.00 km)
+ - Final Orbital Speed          : 7764.64 m/s (Target: 7752.0 m/s)
+ - Upper Stage Reserve Fuel     : 161465.0 kg (12.61 % remaining)
+ - Booster Separation           : EXECUTED CLEANLY AT T+140.0s
+ - Satellite Deployment Status  : DEPLOYED INTO TARGET CIRCULAR ORBIT
+=====================================================================
+[SUCCESS] 3D Mission Control Dashboard saved to: StarshipV3_3D_Mission_Success.png
+[COMPLETE] Simulation finished. Interactive 3D Mission Control active.
+=====================================================================
+  STARSHIP V3 3D REAL-TIME MISSION CONTROL PLATFORM INITIALIZING     
+=====================================================================
+[INITIALIZATION] Building 3D geometry and multi-viewport mission control...
+[T+000.0s] Ignition! 33 Raptor 3 engines active. Antigravity Module set to gamma = 1.20
+[T+140.0s] STAGING EVENT: Booster decoupled! Starship Vacuum Raptors ignited.
+[T+313.4s] SECO & ORBIT INSERTION! Speed: 7757.7 m/s, Altitude: 248.17 km
+[T+313.4s] PAYLOAD DEPLOYMENT SEQUENCE COMMENCED!
+
+=====================================================================
+        STARSHIP V3 3D ASCENT MISSION EXECUTION COMPLETED            
+=====================================================================
+ - Final Mission Elapsed Time   :  323.40 s
+ - Final Orbit Altitude         :  249.53 km (Target: 250.00 km)
+ - Final Orbital Speed          : 7764.64 m/s (Target: 7752.0 m/s)
+ - Upper Stage Reserve Fuel     : 161465.0 kg (12.61 % remaining)
+ - Booster Separation           : EXECUTED CLEANLY AT T+140.0s
+ - Satellite Deployment Status  : DEPLOYED INTO TARGET CIRCULAR ORBIT
+=====================================================================
+[SUCCESS] 3D Mission Control Dashboard saved to: StarshipV3_3D_Mission_Success.png
+[COMPLETE] Simulation finished. Interactive 3D Mission Control active.
+=====================================================================
+  STARSHIP V3 3D REAL-TIME MISSION CONTROL PLATFORM INITIALIZING     
+=====================================================================
+[INITIALIZATION] Building 3D geometry and multi-viewport mission control...
+[T+000.0s] Ignition! 33 Raptor 3 engines active. Antigravity Module set to gamma = 1.20
+[T+140.0s] STAGING EVENT: Booster decoupled! Starship Vacuum Raptors ignited.
+[T+313.4s] SECO & ORBIT INSERTION! Speed: 7757.7 m/s, Altitude: 248.17 km
+[T+313.4s] PAYLOAD DEPLOYMENT SEQUENCE COMMENCED!
+
+=====================================================================
+        STARSHIP V3 3D ASCENT MISSION EXECUTION COMPLETED            
+=====================================================================
+ - Final Mission Elapsed Time   :  323.40 s
+ - Final Orbit Altitude         :  249.53 km (Target: 250.00 km)
+ - Final Orbital Speed          : 7764.64 m/s (Target: 7752.0 m/s)
+ - Upper Stage Reserve Fuel     : 161465.0 kg (12.61 % remaining)
+ - Booster Separation           : EXECUTED CLEANLY AT T+140.0s
+ - Satellite Deployment Status  : DEPLOYED INTO TARGET CIRCULAR ORBIT
+=====================================================================
+[SUCCESS] 3D Mission Control Dashboard saved to: StarshipV3_3D_Mission_Success.png
+[COMPLETE] Simulation finished. Interactive 3D Mission Control active.
+=====================================================================
+  STARSHIP V3 3D REAL-TIME MISSION CONTROL PLATFORM INITIALIZING     
+=====================================================================
+[INITIALIZATION] Building 3D geometry and multi-viewport mission control...
+[T+000.0s] Ignition! 33 Raptor 3 engines active. Antigravity Module set to gamma = 1.20
+[T+140.0s] STAGING EVENT: Booster decoupled! Starship Vacuum Raptors ignited.
+[T+313.4s] SECO & ORBIT INSERTION! Speed: 7757.7 m/s, Altitude: 248.17 km
+[T+313.4s] PAYLOAD DEPLOYMENT SEQUENCE COMMENCED!
+
+=====================================================================
+        STARSHIP V3 3D ASCENT MISSION EXECUTION COMPLETED            
+=====================================================================
+ - Final Mission Elapsed Time   :  323.40 s
+ - Final Orbit Altitude         :  249.53 km (Target: 250.00 km)
+ - Final Orbital Speed          : 7764.64 m/s (Target: 7752.0 m/s)
+ - Upper Stage Reserve Fuel     : 161465.0 kg (12.61 % remaining)
+ - Booster Separation           : EXECUTED CLEANLY AT T+140.0s
+ - Satellite Deployment Status  : DEPLOYED INTO TARGET CIRCULAR ORBIT
+=====================================================================
+[SUCCESS] 3D Mission Control Dashboard saved to: StarshipV3_3D_Mission_Success.png
+[COMPLETE] Simulation finished. Interactive 3D Mission Control active.
+=====================================================================
+  STARSHIP V3 3D REAL-TIME MISSION CONTROL PLATFORM INITIALIZING     
+=====================================================================
+[INITIALIZATION] Building 3D geometry and multi-viewport mission control...
+[T+000.0s] Ignition! 33 Raptor 3 engines active. Antigravity Module set to gamma = 1.20
+[T+140.0s] STAGING EVENT: Booster decoupled! Starship Vacuum Raptors ignited.
+[T+313.4s] SECO & ORBIT INSERTION! Speed: 7757.7 m/s, Altitude: 248.17 km
+[T+313.4s] PAYLOAD DEPLOYMENT SEQUENCE COMMENCED!
+
+=====================================================================
+        STARSHIP V3 3D ASCENT MISSION EXECUTION COMPLETED            
+=====================================================================
+ - Final Mission Elapsed Time   :  323.40 s
+ - Final Orbit Altitude         :  249.53 km (Target: 250.00 km)
+ - Final Orbital Speed          : 7764.64 m/s (Target: 7752.0 m/s)
+ - Upper Stage Reserve Fuel     : 161465.0 kg (12.61 % remaining)
+ - Booster Separation           : EXECUTED CLEANLY AT T+140.0s
+ - Satellite Deployment Status  : DEPLOYED INTO TARGET CIRCULAR ORBIT
+=====================================================================
+[SUCCESS] 3D Mission Control Dashboard saved to: StarshipV3_3D_Mission_Success.png
+[COMPLETE] Simulation finished. Interactive 3D Mission Control active.
+=====================================================================
+  STARSHIP V3 3D REAL-TIME MISSION CONTROL PLATFORM INITIALIZING     
+=====================================================================
+[INITIALIZATION] Building 3D geometry and multi-viewport mission control...
+[T+000.0s] Ignition! 33 Raptor 3 engines active. Antigravity Module set to gamma = 1.20
+[T+140.0s] STAGING EVENT: Booster decoupled! Starship Vacuum Raptors ignited.
+[T+313.4s] SECO & ORBIT INSERTION! Speed: 7757.7 m/s, Altitude: 248.17 km
+[T+313.4s] PAYLOAD DEPLOYMENT SEQUENCE COMMENCED!
+
+=====================================================================
+        STARSHIP V3 3D ASCENT MISSION EXECUTION COMPLETED            
+=====================================================================
+ - Final Mission Elapsed Time   :  323.40 s
+ - Final Orbit Altitude         :  249.53 km (Target: 250.00 km)
+ - Final Orbital Speed          : 7764.64 m/s (Target: 7752.0 m/s)
+ - Upper Stage Reserve Fuel     : 161465.0 kg (12.61 % remaining)
+ - Booster Separation           : EXECUTED CLEANLY AT T+140.0s
+ - Satellite Deployment Status  : DEPLOYED INTO TARGET CIRCULAR ORBIT
+=====================================================================
+[SUCCESS] 3D Mission Control Dashboard saved to: StarshipV3_3D_Mission_Success.png
+[COMPLETE] Simulation finished. Interactive 3D Mission Control active.
+=====================================================================
+  STARSHIP V3 3D REAL-TIME MISSION CONTROL PLATFORM INITIALIZING     
+=====================================================================
+[INITIALIZATION] Building 3D geometry and multi-viewport mission control...
+[T+000.0s] Ignition! 33 Raptor 3 engines active. Antigravity Module set to gamma = 1.20
+[T+140.0s] STAGING EVENT: Booster decoupled! Starship Vacuum Raptors ignited.
+[T+313.4s] SECO & ORBIT INSERTION! Speed: 7757.7 m/s, Altitude: 248.17 km
+[T+313.4s] PAYLOAD DEPLOYMENT SEQUENCE COMMENCED!
+
+=====================================================================
+        STARSHIP V3 3D ASCENT MISSION EXECUTION COMPLETED            
+=====================================================================
+ - Final Mission Elapsed Time   :  323.40 s
+ - Final Orbit Altitude         :  249.53 km (Target: 250.00 km)
+ - Final Orbital Speed          : 7764.64 m/s (Target: 7752.0 m/s)
+ - Upper Stage Reserve Fuel     : 161465.0 kg (12.61 % remaining)
+ - Booster Separation           : EXECUTED CLEANLY AT T+140.0s
+ - Satellite Deployment Status  : DEPLOYED INTO TARGET CIRCULAR ORBIT
+=====================================================================
+[SUCCESS] 3D Mission Control Dashboard saved to: StarshipV3_3D_Mission_Success.png
+[COMPLETE] Simulation finished. Interactive 3D Mission Control active.
+=====================================================================
+  STARSHIP V3 3D REAL-TIME MISSION CONTROL PLATFORM INITIALIZING     
+=====================================================================
+[INITIALIZATION] Building 3D geometry and multi-viewport mission control...
+[T+000.0s] Ignition! 33 Raptor 3 engines active. Antigravity Module set to gamma = 1.20
+[T+140.0s] STAGING EVENT: Booster decoupled! Starship Vacuum Raptors ignited.
+[T+313.4s] SECO & ORBIT INSERTION! Speed: 7757.7 m/s, Altitude: 248.17 km
+[T+313.4s] PAYLOAD DEPLOYMENT SEQUENCE COMMENCED!
+
+=====================================================================
+        STARSHIP V3 3D ASCENT MISSION EXECUTION COMPLETED            
+=====================================================================
+ - Final Mission Elapsed Time   :  323.40 s
+ - Final Orbit Altitude         :  249.53 km (Target: 250.00 km)
+ - Final Orbital Speed          : 7764.64 m/s (Target: 7752.0 m/s)
+ - Upper Stage Reserve Fuel     : 161465.0 kg (12.61 % remaining)
+ - Booster Separation           : EXECUTED CLEANLY AT T+140.0s
+ - Satellite Deployment Status  : DEPLOYED INTO TARGET CIRCULAR ORBIT
+=====================================================================
+[SUCCESS] 3D Mission Control Dashboard saved to: StarshipV3_3D_Mission_Success.png
+[COMPLETE] Simulation finished. Interactive 3D Mission Control active.
+=====================================================================
+  STARSHIP V3 3D REAL-TIME MISSION CONTROL PLATFORM INITIALIZING     
+=====================================================================
+[INITIALIZATION] Building 3D geometry and multi-viewport mission control...
+[T+000.0s] Ignition! 33 Raptor 3 engines active. Antigravity Module set to gamma = 1.20
+[T+140.0s] STAGING EVENT: Booster decoupled! Starship Vacuum Raptors ignited.
+[T+313.4s] SECO & ORBIT INSERTION! Speed: 7757.7 m/s, Altitude: 248.17 km
+[T+313.4s] PAYLOAD DEPLOYMENT SEQUENCE COMMENCED!
+
+=====================================================================
+        STARSHIP V3 3D ASCENT MISSION EXECUTION COMPLETED            
+=====================================================================
+ - Final Mission Elapsed Time   :  323.40 s
+ - Final Orbit Altitude         :  249.53 km (Target: 250.00 km)
+ - Final Orbital Speed          : 7764.64 m/s (Target: 7752.0 m/s)
+ - Upper Stage Reserve Fuel     : 161465.0 kg (12.61 % remaining)
+ - Booster Separation           : EXECUTED CLEANLY AT T+140.0s
+ - Satellite Deployment Status  : DEPLOYED INTO TARGET CIRCULAR ORBIT
+=====================================================================
+[SUCCESS] 3D Mission Control Dashboard saved to: StarshipV3_3D_Mission_Success.png
+[COMPLETE] Simulation finished. Interactive 3D Mission Control active.
+=====================================================================
+  STARSHIP V3 3D REAL-TIME MISSION CONTROL PLATFORM INITIALIZING     
+=====================================================================
+[INITIALIZATION] Building 3D geometry and multi-viewport mission control...
+[T+000.0s] Ignition! 33 Raptor 3 engines active. Antigravity Module set to gamma = 1.20
+[T+140.0s] STAGING EVENT: Booster decoupled! Starship Vacuum Raptors ignited.
+[T+313.4s] SECO & ORBIT INSERTION! Speed: 7757.7 m/s, Altitude: 248.17 km
+[T+313.4s] PAYLOAD DEPLOYMENT SEQUENCE COMMENCED!
+
+=====================================================================
+        STARSHIP V3 3D ASCENT MISSION EXECUTION COMPLETED            
+=====================================================================
+ - Final Mission Elapsed Time   :  323.40 s
+ - Final Orbit Altitude         :  249.53 km (Target: 250.00 km)
+ - Final Orbital Speed          : 7764.64 m/s (Target: 7752.0 m/s)
+ - Upper Stage Reserve Fuel     : 161465.0 kg (12.61 % remaining)
+ - Booster Separation           : EXECUTED CLEANLY AT T+140.0s
+ - Satellite Deployment Status  : DEPLOYED INTO TARGET CIRCULAR ORBIT
+=====================================================================
+[SUCCESS] 3D Mission Control Dashboard saved to: StarshipV3_3D_Mission_Success.png
+[COMPLETE] Simulation finished. Interactive 3D Mission Control active.
+=====================================================================
+  STARSHIP V3 3D REAL-TIME MISSION CONTROL PLATFORM INITIALIZING     
+=====================================================================
+[INITIALIZATION] Building 3D geometry and multi-viewport mission control...
+[T+000.0s] Ignition! 33 Raptor 3 engines active. Antigravity Module set to gamma = 1.20
+[T+140.0s] STAGING EVENT: Booster decoupled! Starship Vacuum Raptors ignited.
+[T+313.4s] SECO & ORBIT INSERTION! Speed: 7757.7 m/s, Altitude: 248.17 km
+[T+313.4s] PAYLOAD DEPLOYMENT SEQUENCE COMMENCED!
+
+=====================================================================
+        STARSHIP V3 3D ASCENT MISSION EXECUTION COMPLETED            
+=====================================================================
+ - Final Mission Elapsed Time   :  323.40 s
+ - Final Orbit Altitude         :  249.53 km (Target: 250.00 km)
+ - Final Orbital Speed          : 7764.64 m/s (Target: 7752.0 m/s)
+ - Upper Stage Reserve Fuel     : 161465.0 kg (12.61 % remaining)
+ - Booster Separation           : EXECUTED CLEANLY AT T+140.0s
+ - Satellite Deployment Status  : DEPLOYED INTO TARGET CIRCULAR ORBIT
+=====================================================================
+[SUCCESS] 3D Mission Control Dashboard saved to: StarshipV3_3D_Mission_Success.png
+[COMPLETE] Simulation finished. Interactive 3D Mission Control active.
+=====================================================================
+  STARSHIP V3 3D REAL-TIME MISSION CONTROL PLATFORM INITIALIZING     
+=====================================================================
+[INITIALIZATION] Building 3D geometry and multi-viewport mission control...
+[T+000.0s] Ignition! 33 Raptor 3 engines active. Antigravity Module set to gamma = 1.20
+[T+140.0s] STAGING EVENT: Booster decoupled! Starship Vacuum Raptors ignited.
+[T+313.4s] SECO & ORBIT INSERTION! Speed: 7757.7 m/s, Altitude: 248.17 km
+[T+313.4s] PAYLOAD DEPLOYMENT SEQUENCE COMMENCED!
+
+=====================================================================
+        STARSHIP V3 3D ASCENT MISSION EXECUTION COMPLETED            
+=====================================================================
+ - Final Mission Elapsed Time   :  323.40 s
+ - Final Orbit Altitude         :  249.53 km (Target: 250.00 km)
+ - Final Orbital Speed          : 7764.64 m/s (Target: 7752.0 m/s)
+ - Upper Stage Reserve Fuel     : 161465.0 kg (12.61 % remaining)
+ - Booster Separation           : EXECUTED CLEANLY AT T+140.0s
+ - Satellite Deployment Status  : DEPLOYED INTO TARGET CIRCULAR ORBIT
+=====================================================================
+{Error using exportgraphics
+PNG library failed:
+Could not open file.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('Starship3DVisualizer/saveSnapshot', 'C:\Users\user\.gemini\antigravity\scratch\StarshipV3_GNC_Simulation\Starship3DVisualizer.m', 466)" style="font-weight:bold">Starship3DVisualizer/saveSnapshot</a> (<a href="matlab: opentoline('C:\Users\user\.gemini\antigravity\scratch\StarshipV3_GNC_Simulation\Starship3DVisualizer.m',466,0)">line 466</a>)
+            exportgraphics(obj.fig, filename, 'Resolution', 200);
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('MasterAscentSimulator', 'C:\Users\user\.gemini\antigravity\scratch\StarshipV3_GNC_Simulation\MasterAscentSimulator.m', 222)" style="font-weight:bold">MasterAscentSimulator</a> (<a href="matlab: opentoline('C:\Users\user\.gemini\antigravity\scratch\StarshipV3_GNC_Simulation\MasterAscentSimulator.m',222,0)">line 222</a>)
+visualizer.saveSnapshot(outSnapshot);
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+} 
+=====================================================================
+  SPACEX STARSHIP V3 DUAL-VEHICLE PARALLEL GNC SIMULATOR INITIALIZING 
+=====================================================================
+[INIT] Building 3D multi-body visualization & mission control GUI...
+[T+000.0s] IGNITION! 33 Raptor 3 engines firing at 100%. Antigravity Module gamma = 1.20
+[T+140.0s] HOT-STAGING COMMENCED: 5 Booster center engines holding + Ship Raptors ignite!
+[T+140.0s] Plume impingement applied against booster forward dome.
+[T+347.1s] SECO & ORBITAL INSERTION ACHIEVED! V: 7752.1 m/s, Alt: 302.31 km
+
+=====================================================================
+     SPACEX STARSHIP V3 DUAL-VEHICLE MISSION PROFILE SUMMARY         
+=====================================================================
+ - Total Mission Duration       :  355.15 s
+ - Starship Final Altitude      :  301.74 km (Target: 250.00 km)
+ - Starship Final Orbital Speed : 7755.50 m/s (Target: 7752.0 m/s)
+ - Starship Reserve Fuel        : 11.04 % remaining
+ - Super Heavy Separation       : EXECUTED AT T+140.0s (HOT-STAGING)
+ - Super Heavy Boostback Burn   : COMPLETED (13 Raptor 3 engines)
+ - Super Heavy Final Position   : X = 192849.9 m, Z = 323640.7 m (Tower Catch)
+ - Satellite Deployment Status  : DEPLOYED INTO TARGET CIRCULAR ORBIT
+=====================================================================
+[SUCCESS] Dual-Vehicle Mission Control Dashboard saved to: StarshipV3_3D_Mission_Success.png
+[SUCCESS] 4-Panel telemetry dashboard exported to: StarshipV3_Ascent_Telemetry.png
+[SUCCESS] All dual-vehicle GNC flight pipelines completed successfully.
+=====================================================================
+  SPACEX STARSHIP V3 DUAL-VEHICLE PARALLEL GNC SIMULATOR INITIALIZING 
+=====================================================================
+[INIT] Building 3D multi-body visualization & mission control GUI...
+[T+000.0s] IGNITION! 33 Raptor 3 engines firing at 100%. Antigravity Module gamma = 1.20
+[T+140.0s] HOT-STAGING COMMENCED: 5 Booster center engines holding + Ship Raptors ignite!
+[T+140.0s] Plume impingement applied against booster forward dome.
+[T+347.1s] SECO & ORBITAL INSERTION ACHIEVED! V: 7752.1 m/s, Alt: 302.31 km
+
+=====================================================================
+     SPACEX STARSHIP V3 DUAL-VEHICLE MISSION PROFILE SUMMARY         
+=====================================================================
+ - Total Mission Duration       :  355.15 s
+ - Starship Final Altitude      :  301.74 km (Target: 250.00 km)
+ - Starship Final Orbital Speed : 7755.50 m/s (Target: 7752.0 m/s)
+ - Starship Reserve Fuel        : 11.04 % remaining
+ - Super Heavy Separation       : EXECUTED AT T+140.0s (HOT-STAGING)
+ - Super Heavy Boostback Burn   : COMPLETED (13 Raptor 3 engines)
+ - Super Heavy Final Position   : X = 192849.9 m, Z = 323640.7 m (Tower Catch)
+ - Satellite Deployment Status  : DEPLOYED INTO TARGET CIRCULAR ORBIT
+=====================================================================
+[SUCCESS] Dual-Vehicle Mission Control Dashboard saved to: StarshipV3_3D_Mission_Success.png
+[SUCCESS] 4-Panel telemetry dashboard exported to: StarshipV3_Ascent_Telemetry.png
+[SUCCESS] All dual-vehicle GNC flight pipelines completed successfully.
