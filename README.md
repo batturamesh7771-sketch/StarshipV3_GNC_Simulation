@@ -1,4 +1,6 @@
 # 🚀 SpaceX Starship V3 Dual-Vehicle Parallel GNC Simulation Platform
+[![Author](https://img.shields.io/badge/Author-ELONIKHIL-blue.svg)](https://github.com/batturamesh7771-sketch)
+
 
 [![MATLAB](https://img.shields.io/badge/MATLAB-R2024a%2B-blue.svg)](https://www.mathworks.com/products/matlab.html)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -128,3 +130,10 @@ Double-click `run_simulation.bat` in the project root directory.
 
 ## 📜 License
 This project is open-source and licensed under the [MIT License](LICENSE).
+
+---
+
+## 👨‍💻 Author & Attribution
+* **Lead Architect & Engineer:** **ELONIKHIL** (@batturamesh7771-sketch)
+* **Project Series:** PROJECT 03 of the Aerospace Engineering Portfolio
+* **License:** [MIT License](LICENSE) (c) 2026 ELONIKHIL
