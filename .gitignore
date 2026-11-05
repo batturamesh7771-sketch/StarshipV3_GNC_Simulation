@@ -1,0 +1,24 @@
+# MATLAB generated files
+*.asv
+*.m~
+*.slxc
+*.autosave
+slprj/
+*.mex*
+*.mat
+*.fig
+
+# Windows thumbnail cache
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# OS generated files
+.DS_Store
+.Spotlight-V100
+.Trashes
+
+# Logs and temp
+*.log
+temp/
+tmp/

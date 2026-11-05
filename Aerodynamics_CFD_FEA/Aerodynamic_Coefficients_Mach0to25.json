@@ -1,0 +1,79 @@
+{
+  "vehicle": "SpaceX Starship / Super Heavy Block 3 (150m Full Stack & 70m Upper Stage)",
+  "reference_area_m2": 63.62,
+  "reference_length_m": 150.0,
+  "flow_regimes": [
+    {
+      "mach": 0.2,
+      "regime": "Subsonic Liftoff",
+      "Cd": 0.28,
+      "Cl_alpha_per_deg": 0.045,
+      "Cp_base": -0.15,
+      "q_bar_nominal_kPa": 1.2
+    },
+    {
+      "mach": 0.8,
+      "regime": "Subsonic Transonic Inception",
+      "Cd": 0.32,
+      "Cl_alpha_per_deg": 0.052,
+      "Cp_base": -0.22,
+      "q_bar_nominal_kPa": 18.5
+    },
+    {
+      "mach": 1.0,
+      "regime": "Sonic Shock Formation",
+      "Cd": 0.58,
+      "Cl_alpha_per_deg": 0.068,
+      "Cp_base": -0.38,
+      "q_bar_nominal_kPa": 31.0
+    },
+    {
+      "mach": 1.42,
+      "regime": "Max-Q Peak Dynamic Pressure",
+      "Cd": 0.52,
+      "Cl_alpha_per_deg": 0.062,
+      "Cp_base": -0.32,
+      "q_bar_nominal_kPa": 38.4
+    },
+    {
+      "mach": 2.5,
+      "regime": "Supersonic Expansion",
+      "Cd": 0.42,
+      "Cl_alpha_per_deg": 0.048,
+      "Cp_base": -0.25,
+      "q_bar_nominal_kPa": 24.1
+    },
+    {
+      "mach": 5.0,
+      "regime": "Hypersonic Inception",
+      "Cd": 0.35,
+      "Cl_alpha_per_deg": 0.035,
+      "Cp_base": -0.18,
+      "q_bar_nominal_kPa": 8.6
+    },
+    {
+      "mach": 10.0,
+      "regime": "Hypersonic Entry Flow",
+      "Cd": 1.35,
+      "Cl_belly_flop_65deg": 0.95,
+      "T_stag_K": 1480,
+      "q_bar_nominal_kPa": 3.2
+    },
+    {
+      "mach": 20.0,
+      "regime": "Peak Aerothermal Heating (7.2 km/s)",
+      "Cd": 1.42,
+      "Cl_belly_flop_70deg": 1.05,
+      "T_stag_K": 1750,
+      "q_bar_nominal_kPa": 1.8
+    },
+    {
+      "mach": 25.0,
+      "regime": "Orbital Entry Interface (7.8 km/s)",
+      "Cd": 1.48,
+      "Cl_belly_flop_70deg": 1.1,
+      "T_stag_K": 1820,
+      "q_bar_nominal_kPa": 0.4
+    }
+  ]
+}
