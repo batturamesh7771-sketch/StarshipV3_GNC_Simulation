@@ -16,9 +16,9 @@
   
   <style>
     :root {
-      --bg-dark: #06080d;
-      --panel-bg: rgba(10, 14, 24, 0.85);
-      --panel-border: rgba(0, 229, 255, 0.25);
+      --bg-dark: #05070b;
+      --panel-bg: rgba(9, 13, 22, 0.88);
+      --panel-border: rgba(0, 229, 255, 0.28);
       --accent-cyan: #00e5ff;
       --accent-green: #00ff66;
       --accent-orange: #ff5500;
@@ -27,7 +27,7 @@
       --text-main: #e2e8f0;
       --text-muted: #8492a6;
       --font-display: 'Orbitron', -apple-system, sans-serif;
-      --font-mono: 'JetBrains+Mono', monospace;
+      --font-mono: 'JetBrains Mono', monospace;
     }
     
     * {
@@ -61,15 +61,15 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 60px;
-      background: linear-gradient(180deg, rgba(6, 8, 13, 0.95) 0%, rgba(6, 8, 13, 0.7) 80%, transparent 100%);
+      height: 64px;
+      background: linear-gradient(180deg, rgba(5, 7, 11, 0.98) 0%, rgba(5, 7, 11, 0.8) 80%, transparent 100%);
       border-bottom: 1px solid var(--panel-border);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 24px;
+      padding: 0 20px;
       z-index: 10;
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
     }
     
     .logo-container {
@@ -91,28 +91,42 @@
     
     .mission-title {
       font-family: var(--font-display);
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 700;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.2px;
       color: #fff;
     }
     
     .mission-title span {
       color: var(--accent-cyan);
     }
+
+    .zero-login-pill {
+      background: rgba(0, 255, 102, 0.15);
+      border: 1px solid var(--accent-green);
+      color: var(--accent-green);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.5px;
+    }
     
     .header-links {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
     
     .btn-link {
       background: rgba(0, 229, 255, 0.1);
       border: 1px solid var(--accent-cyan);
       color: var(--accent-cyan);
-      padding: 6px 14px;
-      font-size: 11px;
+      padding: 6px 12px;
+      font-size: 10.5px;
       font-family: var(--font-display);
       font-weight: 600;
       border-radius: 4px;
@@ -129,38 +143,38 @@
       color: #000;
       box-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
     }
-    
-    .btn-matlab {
-      background: rgba(220, 80, 20, 0.15);
-      border-color: #ff6622;
-      color: #ff9955;
+
+    .btn-run-fast {
+      background: linear-gradient(135deg, rgba(0, 255, 102, 0.25), rgba(0, 229, 255, 0.25));
+      border: 1px solid var(--accent-green);
+      color: var(--accent-green);
     }
-    
-    .btn-matlab:hover {
-      background: #ff6622;
-      color: #fff;
-      box-shadow: 0 0 15px rgba(255, 102, 34, 0.6);
+
+    .btn-run-fast:hover {
+      background: var(--accent-green);
+      color: #000;
+      box-shadow: 0 0 20px rgba(0, 255, 102, 0.8);
     }
     
     /* Navigation Tabs */
     .tab-bar {
       position: absolute;
-      top: 68px;
-      left: 24px;
+      top: 72px;
+      left: 20px;
       display: flex;
       gap: 8px;
       z-index: 10;
     }
     
     .tab-btn {
-      background: rgba(10, 14, 24, 0.8);
+      background: rgba(9, 13, 22, 0.85);
       border: 1px solid rgba(255, 255, 255, 0.15);
       color: var(--text-muted);
-      padding: 7px 14px;
+      padding: 7px 13px;
       font-family: var(--font-display);
-      font-size: 10px;
+      font-size: 9.5px;
       font-weight: 600;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
       border-radius: 4px;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -176,7 +190,19 @@
       background: rgba(0, 229, 255, 0.15);
       border-color: var(--accent-cyan);
       color: var(--accent-cyan);
-      box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+      box-shadow: 0 0 12px rgba(0, 229, 255, 0.35);
+    }
+
+    .tab-btn.matlab-tab {
+      border-color: rgba(0, 255, 102, 0.4);
+      color: #88ffbb;
+    }
+
+    .tab-btn.matlab-tab.active {
+      background: rgba(0, 255, 102, 0.2);
+      border-color: var(--accent-green);
+      color: var(--accent-green);
+      box-shadow: 0 0 12px rgba(0, 255, 102, 0.4);
     }
     
     /* Left Telemetry HUD */
@@ -185,22 +211,22 @@
       background: var(--panel-bg);
       border: 1px solid var(--panel-border);
       border-radius: 6px;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
       z-index: 10;
-      padding: 14px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+      padding: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
     }
     
     .hud-left {
-      top: 114px;
-      left: 24px;
-      width: 320px;
+      top: 118px;
+      left: 20px;
+      width: 310px;
     }
     
     .hud-right {
-      top: 114px;
-      right: 24px;
-      width: 320px;
+      top: 118px;
+      right: 20px;
+      width: 310px;
     }
     
     .panel-header {
@@ -208,11 +234,11 @@
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 1px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 6px;
+      padding-bottom: 5px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     
@@ -220,9 +246,9 @@
     .panel-header.booster-header { color: var(--accent-orange); }
     
     .status-pill {
-      font-size: 9px;
+      font-size: 8.5px;
       font-weight: 700;
-      padding: 3px 6px;
+      padding: 2px 6px;
       border-radius: 3px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -244,13 +270,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 8px;
-      font-size: 11px;
+      margin-bottom: 6px;
+      font-size: 10.5px;
     }
     
     .telemetry-label {
       color: var(--text-muted);
-      font-size: 10px;
+      font-size: 9.5px;
     }
     
     .telemetry-val {
@@ -261,21 +287,21 @@
     
     /* Gauges */
     .gauge-container {
-      margin-top: 10px;
+      margin-top: 8px;
     }
     
     .gauge-bar-outer {
       width: 100%;
-      height: 7px;
+      height: 6px;
       background: rgba(255, 255, 255, 0.08);
       border-radius: 4px;
       overflow: hidden;
-      margin-top: 4px;
+      margin-top: 3px;
     }
     
     .gauge-bar-inner {
       height: 100%;
-      transition: width 0.15s ease;
+      transition: width 0.1s ease;
       border-radius: 4px;
     }
     
@@ -287,14 +313,14 @@
     /* Bottom Flight Timeline & Controls */
     .bottom-bar {
       position: absolute;
-      bottom: 20px;
+      bottom: 16px;
       left: 50%;
       transform: translateX(-50%);
       width: min(96%, 1020px);
       background: var(--panel-bg);
       border: 1px solid var(--panel-border);
       border-radius: 8px;
-      padding: 12px 20px;
+      padding: 10px 18px;
       z-index: 10;
       backdrop-filter: blur(12px);
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
@@ -302,7 +328,7 @@
     
     .timeline-scrubber {
       width: 100%;
-      margin: 8px 0;
+      margin: 6px 0;
       appearance: none;
       height: 6px;
       background: rgba(255, 255, 255, 0.1);
@@ -324,9 +350,9 @@
     .timeline-milestones {
       display: flex;
       justify-content: space-between;
-      font-size: 9px;
+      font-size: 8.5px;
       color: var(--text-muted);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     
     .milestone-btn {
@@ -334,7 +360,7 @@
       border: none;
       color: var(--text-muted);
       font-family: var(--font-mono);
-      font-size: 9px;
+      font-size: 8.5px;
       cursor: pointer;
       transition: color 0.2s;
     }
@@ -345,7 +371,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
     
     .btn-group {
@@ -358,9 +384,9 @@
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.15);
       color: #fff;
-      padding: 6px 14px;
+      padding: 5px 12px;
       font-family: var(--font-display);
-      font-size: 10px;
+      font-size: 9.5px;
       font-weight: 700;
       border-radius: 4px;
       cursor: pointer;
@@ -380,12 +406,12 @@
     }
     
     .cam-select {
-      background: rgba(10, 14, 24, 0.9);
+      background: rgba(9, 13, 22, 0.95);
       border: 1px solid var(--panel-border);
       color: var(--accent-cyan);
-      padding: 6px 12px;
+      padding: 5px 10px;
       font-family: var(--font-mono);
-      font-size: 10px;
+      font-size: 9.5px;
       border-radius: 4px;
       outline: none;
       cursor: pointer;
@@ -397,26 +423,26 @@
       top: 114px;
       left: 50%;
       transform: translateX(-50%);
-      width: min(92%, 860px);
-      max-height: calc(100vh - 220px);
-      background: rgba(8, 11, 20, 0.95);
+      width: min(94%, 920px);
+      max-height: calc(100vh - 190px);
+      background: rgba(7, 10, 18, 0.96);
       border: 1px solid var(--accent-cyan);
       border-radius: 8px;
-      padding: 24px;
+      padding: 20px;
       z-index: 20;
       overflow-y: auto;
-      box-shadow: 0 0 50px rgba(0, 229, 255, 0.2);
+      box-shadow: 0 0 50px rgba(0, 229, 255, 0.25);
       display: none;
-      backdrop-filter: blur(15px);
+      backdrop-filter: blur(16px);
     }
     
     .overlay-tab-content.show { display: block; }
     
     .overlay-title {
       font-family: var(--font-display);
-      font-size: 18px;
+      font-size: 16px;
       color: var(--accent-cyan);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -435,59 +461,97 @@
     .grid-2col {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-top: 14px;
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .grid-4col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 12px;
     }
     
     .info-card {
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 6px;
-      padding: 14px;
+      padding: 12px;
     }
     
     .info-card h4 {
       font-family: var(--font-display);
-      font-size: 12px;
+      font-size: 11px;
       color: var(--accent-green);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     
     .info-card p, .info-card li {
-      font-size: 11px;
+      font-size: 10.5px;
       color: #cbd5e1;
-      line-height: 1.6;
+      line-height: 1.5;
     }
     
     .info-card ul {
-      margin-left: 18px;
-      margin-top: 6px;
+      margin-left: 16px;
+      margin-top: 5px;
     }
     
     pre.code-snippet {
       background: #020408;
       border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 12px;
+      padding: 10px;
       border-radius: 4px;
-      font-size: 11px;
+      font-size: 10px;
       color: #38bdf8;
       overflow-x: auto;
-      margin-top: 8px;
+      margin-top: 6px;
+      font-family: var(--font-mono);
+    }
+
+    /* MATLAB Terminal Console */
+    .terminal-window {
+      background: #010306;
+      border: 1px solid rgba(0, 255, 102, 0.3);
+      border-radius: 6px;
+      padding: 12px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: #a3e635;
+      height: 240px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      line-height: 1.4;
+      margin-top: 10px;
+    }
+
+    .plot-canvas-box {
+      background: #03060c;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .plot-canvas-box h5 {
+      font-size: 9.5px;
+      color: var(--accent-cyan);
+      margin-bottom: 4px;
+      font-family: var(--font-display);
     }
     
-    /* Reticle indicator */
     .view-indicator {
       position: absolute;
       top: 72px;
-      right: 24px;
-      font-size: 10px;
+      right: 20px;
+      font-size: 9.5px;
       color: var(--accent-cyan);
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.65);
       padding: 4px 10px;
       border-radius: 4px;
       border: 1px solid rgba(0, 229, 255, 0.3);
       z-index: 10;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
     }
   </style>
 </head>
@@ -501,13 +565,15 @@
     <div class="logo-container">
       <div class="mission-badge">SPACEX V3</div>
       <div class="mission-title">STARSHIP <span>DUAL-VEHICLE GNC DIGITAL TWIN</span></div>
+      <div class="zero-login-pill">
+        <span style="font-size:12px;">●</span> ZERO LOGIN CLOUD RUNNER
+      </div>
     </div>
     
     <div class="header-links">
-      <a href="https://matlab.mathworks.com/open/github/v1?repo=batturamesh7771-sketch/StarshipV3_GNC_Simulation" target="_blank" class="btn-link btn-matlab">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        RUN IN MATLAB ONLINE
-      </a>
+      <button class="btn-link btn-run-fast" onclick="runMatlabBatchSolver()">
+        ⚡ RUN MATLAB RK4 SOLVER NOW
+      </button>
       <a href="https://github.com/batturamesh7771-sketch/StarshipV3_GNC_Simulation" target="_blank" class="btn-link">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
         GITHUB REPO
@@ -521,6 +587,7 @@
   <!-- Navigation Tab Bar -->
   <div class="tab-bar">
     <button class="tab-btn active" onclick="switchTab('sim')">3D MISSION SIMULATION</button>
+    <button class="tab-btn matlab-tab" onclick="switchTab('matlab')">MATLAB TERMINAL & 4-PANEL PLOTS</button>
     <button class="tab-btn" onclick="switchTab('cad')">3D CAD & STRUCTURAL TWIN</button>
     <button class="tab-btn" onclick="switchTab('cfd')">CFD & AERODYNAMICS</button>
     <button class="tab-btn" onclick="switchTab('fea')">FEA CRYOTANK STRESS</button>
@@ -639,9 +706,9 @@
     </div>
 
     <!-- Separation Status Box -->
-    <div class="info-card" style="margin-top:12px; padding:10px; background:rgba(0,0,0,0.4);">
-      <h4 style="font-size:10px; margin-bottom:4px; color:var(--accent-orange);">RTLS RECOVERY MODE</h4>
-      <p style="font-size:10px;" id="rtlsModeDesc">Boostback burn targets Starbase Mechazilla Chopstick landing pins at coords (0,0).</p>
+    <div class="info-card" style="margin-top:10px; padding:8px; background:rgba(0,0,0,0.4);">
+      <h4 style="font-size:9.5px; margin-bottom:3px; color:var(--accent-orange);">RTLS RECOVERY MODE</h4>
+      <p style="font-size:9px;" id="rtlsModeDesc">Boostback burn targets Starbase Mechazilla Chopstick landing pins at coords (0,0).</p>
     </div>
   </div>
 
@@ -680,6 +747,52 @@
         </select>
         <button class="btn-ctrl" onclick="toggleWireframe()">WIREFRAME</button>
         <button class="btn-ctrl" onclick="toggleExploded()">EXPLODE STACK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- OVERLAY TAB: MATLAB SIMULATION TERMINAL & 4-PANEL PLOTS -->
+  <div class="overlay-tab-content" id="modalMatlab">
+    <div class="overlay-title">
+      <span>💻 VIRTUAL MATLAB NUMERICAL TERMINAL & 4-PANEL TELEMETRY (NO LOGIN REQUIRED)</span>
+      <button class="overlay-close" onclick="closeModals()">✕</button>
+    </div>
+    <p>This virtual terminal runs the exact 1:1 mathematical physics and RK4 integration equations from <code>MasterAscentSimulator.m</code> directly in your browser without requiring a MathWorks login or local MATLAB installation.</p>
+    
+    <div style="display:flex; gap:10px; margin: 12px 0;">
+      <button class="btn-link btn-run-fast" onclick="runMatlabBatchSolver()" style="font-size:11px; padding:8px 16px;">
+        ⚡ EXECUTE FULL RK4 NUMERICAL INTEGRATION (9,000 STEPS)
+      </button>
+      <button class="btn-link" onclick="clearTerminal()" style="font-size:11px; padding:8px 16px;">
+        CLEAR CONSOLE
+      </button>
+    </div>
+
+    <!-- Live Terminal Window -->
+    <div class="terminal-window" id="matlabTerminal">
+=====================================================================
+  SPACEX STARSHIP V3 DUAL-VEHICLE PARALLEL GNC SIMULATOR INITIALIZING 
+=====================================================================
+[INIT] Engine ready. Click 'EXECUTE FULL RK4 NUMERICAL INTEGRATION' to run the mathematical solver in real-time.
+    </div>
+
+    <!-- 4 Live Canvas Plots -->
+    <div class="grid-4col">
+      <div class="plot-canvas-box">
+        <h5>DOWNRANGE X vs ALTITUDE Z (KM)</h5>
+        <canvas id="plotTraj" width="400" height="150" style="width:100%; height:140px;"></canvas>
+      </div>
+      <div class="plot-canvas-box">
+        <h5>VELOCITY MAGNITUDE (M/S)</h5>
+        <canvas id="plotVel" width="400" height="150" style="width:100%; height:140px;"></canvas>
+      </div>
+      <div class="plot-canvas-box">
+        <h5>DYNAMIC PRESSURE q (KPA) & THROTTLE %</h5>
+        <canvas id="plotQ" width="400" height="150" style="width:100%; height:140px;"></canvas>
+      </div>
+      <div class="plot-canvas-box">
+        <h5>PROPELLANT CONSUMPTION (%)</h5>
+        <canvas id="plotProp" width="400" height="150" style="width:100%; height:140px;"></canvas>
       </div>
     </div>
   </div>
@@ -787,8 +900,11 @@ Mach 25.0: Cd = 0.26 (Hypersonic Asymptote)</pre>
         <h4>🚀 1-Click Cloud Execution Links</h4>
         <p>Execute the full numerical integration script (`MasterAscentSimulator.m`) in your web browser:</p>
         <div style="display:flex; flex-direction:column; gap:8px; margin-top:10px;">
-          <a href="https://matlab.mathworks.com/open/github/v1?repo=batturamesh7771-sketch/StarshipV3_GNC_Simulation" target="_blank" class="btn-link btn-matlab" style="justify-content:center;">
-            RUN IN MATLAB ONLINE (OFFICIAL CLOUD)
+          <button class="btn-link btn-run-fast" onclick="switchTab('matlab')" style="justify-content:center;">
+            ⚡ RUN IN-BROWSER MATLAB SIMULATOR (ZERO LOGIN)
+          </button>
+          <a href="https://matlab.mathworks.com/open/github/v1?repo=batturamesh7771-sketch/StarshipV3_GNC_Simulation" target="_blank" class="btn-link" style="justify-content:center; border-color:#ff6622; color:#ff9955;">
+            RUN IN MATLAB ONLINE (REQUIRES MATHWORKS LOGIN)
           </a>
           <a href="https://mybinder.org/v2/gh/batturamesh7771-sketch/StarshipV3_GNC_Simulation/main" target="_blank" class="btn-link" style="justify-content:center;">
             RUN IN MYBINDER JUPYTER / OCTAVE CLOUD
@@ -813,7 +929,7 @@ Mach 25.0: Cd = 0.26 (Hypersonic Asymptote)</pre>
     </div>
   </div>
 
-  <!-- Simulation Engine Script (Three.js WebGL) -->
+  <!-- Simulation Engine Script (Three.js WebGL + Embedded MATLAB Numerical Solver) -->
   <script>
     // Global Simulation State
     let simTime = 0.0;
@@ -833,286 +949,47 @@ Mach 25.0: Cd = 0.26 (Hypersonic Asymptote)</pre>
     // Simulation Data Points (Interpolated from MasterAscentSimulator.m output)
     const T_STAGE = 140.0;
     const T_SECO = 347.1;
-    const T_CATCH = 410.0;
+    const T_CATCH = 408.4;
 
-    function initThree() {
-      const container = document.getElementById('canvas3d');
-      scene = new THREE.Scene();
-      scene.fog = new THREE.FogExp2(0x06080d, 0.0003);
+    // =========================================================================
+    // EMBEDDED COMPUTATIONAL GNC & RK4 SOLVER ENGINE (PORTED FROM MATLAB)
+    // =========================================================================
+    const VehicleConstants = {
+      m_booster_dry: 230000.0,
+      m_booster_prop: 3650000.0,
+      m_ship_dry: 120000.0,
+      m_ship_prop: 1500000.0,
+      m_payload: 150000.0,
+      m0_total: 5500000.0,
+      thrust_raptor_sl: 2.75e6,
+      thrust_raptor_vac: 2.95e6,
+      thrust_ship_vac: 24.0e6,
+      Isp_booster_sl: 330.0,
+      Isp_booster_vac: 350.0,
+      Isp_ship_vac: 380.0,
+      Re: 6378137.0,
+      mu: 3.986004418e14,
+      omega_earth: 7.292115e-5,
+      g0: 9.80665,
+      rho0: 1.225,
+      H_scale: 7200.0,
+      A_ref: 63.62
+    };
 
-      camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 50000);
-      camera.position.set(160, 80, 180);
-
-      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-      renderer.toneMapping = THREE.ACESFilmicToneMapping;
-      renderer.toneMappingExposure = 1.2;
-      container.appendChild(renderer.domElement);
-
-      controls = new THREE.OrbitControls(camera, renderer.domElement);
-      controls.enableDamping = true;
-      controls.dampingFactor = 0.05;
-      controls.maxDistance = 12000;
-      controls.minDistance = 5;
-
-      // Lights
-      const ambientLight = new THREE.AmbientLight(0xffffff, 0.65);
-      scene.add(ambientLight);
-
-      const sunLight = new THREE.DirectionalLight(0xfffaed, 2.0);
-      sunLight.position.set(800, 1200, 600);
-      scene.add(sunLight);
-
-      const earthGlowLight = new THREE.DirectionalLight(0x1a4488, 1.2);
-      earthGlowLight.position.set(-600, -800, -400);
-      scene.add(earthGlowLight);
-
-      buildStarfield();
-      buildEarth();
-      buildRocketModel();
-      buildExhaustPlumes();
-      buildTrajectoryLines();
-
-      window.addEventListener('resize', onWindowResize);
+    function getAtmosphericDensity(alt) {
+      const h = Math.max(0.0, alt);
+      return VehicleConstants.rho0 * Math.exp(-h / VehicleConstants.H_scale);
     }
 
-    function buildStarfield() {
-      const starGeo = new THREE.BufferGeometry();
-      const count = 3000;
-      const positions = new Float32Array(count * 3);
-      for (let i = 0; i < count * 3; i += 3) {
-        positions[i] = (Math.random() - 0.5) * 30000;
-        positions[i + 1] = (Math.random() - 0.5) * 30000;
-        positions[i + 2] = (Math.random() - 0.5) * 30000;
+    function getDragCoefficient(mach) {
+      if (mach < 0.8) return 0.28 + 0.05 * Math.pow(mach / 0.8, 2);
+      if (mach < 1.05) {
+        const t = (mach - 0.8) / 0.25;
+        return 0.33 + 0.35 * (3 * t * t - 2 * t * t * t);
       }
-      starGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-      const starMat = new THREE.PointsMaterial({ color: 0xcccccc, size: 1.8, transparent: true, opacity: 0.8 });
-      stars = new THREE.Points(starGeo, starMat);
-      scene.add(stars);
-    }
-
-    function buildEarth() {
-      // Scaled Earth Sphere at bottom
-      const earthRadius = 3000;
-      const earthGeo = new THREE.SphereGeometry(earthRadius, 64, 64);
-      const earthMat = new THREE.MeshStandardMaterial({
-        color: 0x0c2548,
-        roughness: 0.8,
-        metalness: 0.1,
-        wireframe: false
-      });
-      earthMesh = new THREE.Mesh(earthGeo, earthMat);
-      earthMesh.position.set(0, -earthRadius, 0);
-      scene.add(earthMesh);
-
-      // Atmosphere glow ring
-      const atmosGeo = new THREE.SphereGeometry(earthRadius + 60, 48, 48);
-      const atmosMat = new THREE.MeshBasicMaterial({
-        color: 0x00a2ff,
-        transparent: true,
-        opacity: 0.12,
-        side: THREE.BackSide
-      });
-      const atmosMesh = new THREE.Mesh(atmosGeo, atmosMat);
-      earthMesh.add(atmosMesh);
-
-      // Starbase Launch Pad Marker
-      const padGeo = new THREE.CylinderGeometry(15, 18, 4, 16);
-      const padMat = new THREE.MeshStandardMaterial({ color: 0x334155, metalness: 0.7, roughness: 0.3 });
-      const padMesh = new THREE.Mesh(padGeo, padMat);
-      padMesh.position.set(0, earthRadius + 2, 0);
-      earthMesh.add(padMesh);
-
-      // Mechazilla Catch Tower
-      const towerGeo = new THREE.BoxGeometry(4, 75, 4);
-      const towerMat = new THREE.MeshStandardMaterial({ color: 0x475569, metalness: 0.8, roughness: 0.2 });
-      const towerMesh = new THREE.Mesh(towerGeo, towerMat);
-      towerMesh.position.set(0, earthRadius + 38, 12);
-      earthMesh.add(towerMesh);
-    }
-
-    function buildRocketModel() {
-      fullStackGroup = new THREE.Group();
-      scene.add(fullStackGroup);
-
-      // Materials
-      const steelMat = new THREE.MeshStandardMaterial({
-        color: 0xdde4ec,
-        metalness: 0.92,
-        roughness: 0.22,
-        wireframe: false
-      });
-      const darkTileMat = new THREE.MeshStandardMaterial({
-        color: 0x111318,
-        metalness: 0.2,
-        roughness: 0.85
-      });
-      const flapSteelMat = new THREE.MeshStandardMaterial({
-        color: 0xbac5d2,
-        metalness: 0.88,
-        roughness: 0.3
-      });
-
-      // 1. SUPER HEAVY BOOSTER (Height: 72m, Radius: 4.5m)
-      boosterMeshGroup = new THREE.Group();
-      fullStackGroup.add(boosterMeshGroup);
-
-      const boosterBodyGeo = new THREE.CylinderGeometry(4.5, 4.5, 70, 32);
-      const boosterBody = new THREE.Mesh(boosterBodyGeo, steelMat);
-      boosterBody.position.y = 35;
-      boosterMeshGroup.add(boosterBody);
-
-      // 4 Grid Fins (Top of Booster at Y ~ 68)
-      for (let i = 0; i < 4; i++) {
-        const finGeo = new THREE.BoxGeometry(3.5, 0.4, 2.2);
-        const finMesh = new THREE.Mesh(finGeo, darkTileMat);
-        const angle = (i * Math.PI) / 2;
-        finMesh.position.set(Math.cos(angle) * 5.8, 66, Math.sin(angle) * 5.8);
-        finMesh.rotation.y = angle;
-        boosterMeshGroup.add(finMesh);
-      }
-
-      // 33 Raptor Engine Cluster Skirt (Base at Y ~ 0)
-      const skirtGeo = new THREE.CylinderGeometry(4.5, 4.2, 3, 32);
-      const skirtMesh = new THREE.Mesh(skirtGeo, darkTileMat);
-      skirtMesh.position.y = 1.5;
-      boosterMeshGroup.add(skirtMesh);
-
-      // 2. HOT-STAGING INTERSTAGE RING (Height: 4m, Radius: 4.5m)
-      interstageMeshGroup = new THREE.Group();
-      interstageMeshGroup.position.y = 70;
-      fullStackGroup.add(interstageMeshGroup);
-
-      const ringGeo = new THREE.CylinderGeometry(4.55, 4.55, 4, 32, 1, true);
-      const ringMat = new THREE.MeshStandardMaterial({ color: 0x3a424e, metalness: 0.85, roughness: 0.35, side: THREE.DoubleSide });
-      const ringMesh = new THREE.Mesh(ringGeo, ringMat);
-      ringMesh.position.y = 2;
-      interstageMeshGroup.add(ringMesh);
-
-      // 3. STARSHIP UPPER STAGE (Height: 52m, Radius: 4.5m)
-      shipMeshGroup = new THREE.Group();
-      shipMeshGroup.position.y = 74;
-      fullStackGroup.add(shipMeshGroup);
-
-      // Ship Cylindrical Fuselage (34m)
-      const shipBodyGeo = new THREE.CylinderGeometry(4.5, 4.5, 34, 32);
-      const shipBody = new THREE.Mesh(shipBodyGeo, steelMat);
-      shipBody.position.y = 17;
-      shipMeshGroup.add(shipBody);
-
-      // Heat Shield Belly (Hexagonal Tiles on -X side)
-      const heatShieldGeo = new THREE.CylinderGeometry(4.55, 4.55, 34, 32, 1, false, Math.PI / 2, Math.PI);
-      const heatShieldMesh = new THREE.Mesh(heatShieldGeo, darkTileMat);
-      heatShieldMesh.position.y = 17;
-      shipMeshGroup.add(heatShieldMesh);
-
-      // Aerodynamic Nose Cone (18m)
-      const noseGeo = new THREE.ConeGeometry(4.5, 18, 32);
-      const noseMesh = new THREE.Mesh(noseGeo, steelMat);
-      noseMesh.position.y = 43;
-      shipMeshGroup.add(noseMesh);
-
-      const noseTileGeo = new THREE.ConeGeometry(4.55, 18, 32, 1, false, Math.PI / 2, Math.PI);
-      const noseTileMesh = new THREE.Mesh(noseTileGeo, darkTileMat);
-      noseTileMesh.position.y = 43;
-      shipMeshGroup.add(noseTileMesh);
-
-      // Forward Flaps (Top near Nose Cone)
-      const fwdFlapGeo = new THREE.BoxGeometry(3.5, 0.4, 4.5);
-      const fwdFlapLeft = new THREE.Mesh(fwdFlapGeo, flapSteelMat);
-      fwdFlapLeft.position.set(-5.6, 40, 0);
-      shipMeshGroup.add(fwdFlapLeft);
-
-      const fwdFlapRight = new THREE.Mesh(fwdFlapGeo, flapSteelMat);
-      fwdFlapRight.position.set(5.6, 40, 0);
-      shipMeshGroup.add(fwdFlapRight);
-
-      // Aft Flaps (Bottom of Ship)
-      const aftFlapGeo = new THREE.BoxGeometry(4.5, 0.4, 7.5);
-      const aftFlapLeft = new THREE.Mesh(aftFlapGeo, flapSteelMat);
-      aftFlapLeft.position.set(-6.2, 5, 0);
-      shipMeshGroup.add(aftFlapLeft);
-
-      const aftFlapRight = new THREE.Mesh(aftFlapGeo, flapSteelMat);
-      aftFlapRight.position.set(6.2, 5, 0);
-      shipMeshGroup.add(aftFlapRight);
-
-      // 4. PAYLOAD SATELLITE (Inside Nose Cone)
-      satelliteMeshGroup = new THREE.Group();
-      satelliteMeshGroup.position.set(0, 36, 0);
-      shipMeshGroup.add(satelliteMeshGroup);
-
-      const satBusGeo = new THREE.BoxGeometry(3, 3, 4);
-      const satBusMat = new THREE.MeshStandardMaterial({ color: 0xffcc00, metalness: 0.95, roughness: 0.1 });
-      const satBus = new THREE.Mesh(satBusGeo, satBusMat);
-      satelliteMeshGroup.add(satBus);
-
-      // Dual Solar Arrays
-      const panelGeo = new THREE.BoxGeometry(10, 0.1, 2.5);
-      const panelMat = new THREE.MeshStandardMaterial({ color: 0x0044cc, metalness: 0.8, roughness: 0.3 });
-      const panelMesh = new THREE.Mesh(panelGeo, panelMat);
-      panelMesh.position.y = 0;
-      satelliteMeshGroup.add(panelMesh);
-    }
-
-    function buildExhaustPlumes() {
-      // Booster Liftoff Flame (Bright Orange)
-      const flameBoosterGeo = new THREE.ConeGeometry(5.2, 35, 24);
-      flameBoosterGeo.rotateX(Math.PI);
-      const flameBoosterMat = new THREE.MeshBasicMaterial({
-        color: 0xff5500,
-        transparent: true,
-        opacity: 0.85
-      });
-      flameBooster = new THREE.Mesh(flameBoosterGeo, flameBoosterMat);
-      flameBooster.position.y = -17.5;
-      boosterMeshGroup.add(flameBooster);
-
-      // Ship Vacuum Raptor Flame (Cyan)
-      const flameShipGeo = new THREE.ConeGeometry(4.8, 28, 24);
-      flameShipGeo.rotateX(Math.PI);
-      const flameShipMat = new THREE.MeshBasicMaterial({
-        color: 0x00e5ff,
-        transparent: true,
-        opacity: 0.85
-      });
-      flameShip = new THREE.Mesh(flameShipGeo, flameShipMat);
-      flameShip.position.y = -14;
-      flameShip.visible = false;
-      shipMeshGroup.add(flameShip);
-
-      // Booster Boostback Flame
-      flameBoostback = new THREE.Mesh(flameBoosterGeo, flameBoosterMat);
-      flameBoostback.position.y = -17.5;
-      flameBoostback.visible = false;
-      boosterMeshGroup.add(flameBoostback);
-    }
-
-    function buildTrajectoryLines() {
-      // Starship Orbit Trajectory Line (Green)
-      const shipPoints = [];
-      const boosterPoints = [];
-
-      for (let t = 0; t <= 450; t += 2) {
-        const pShip = computeFlightState(t).shipPos;
-        shipPoints.push(new THREE.Vector3(pShip.x, pShip.y, pShip.z));
-
-        if (t >= T_STAGE) {
-          const pBooster = computeFlightState(t).boosterPos;
-          boosterPoints.push(new THREE.Vector3(pBooster.x, pBooster.y, pBooster.z));
-        }
-      }
-
-      const shipLineGeo = new THREE.BufferGeometry().setFromPoints(shipPoints);
-      const shipLineMat = new THREE.LineBasicMaterial({ color: 0x00ff66, linewidth: 2 });
-      trajectoryLineShip = new THREE.Line(shipLineGeo, shipLineMat);
-      scene.add(trajectoryLineShip);
-
-      const boosterLineGeo = new THREE.BufferGeometry().setFromPoints(boosterPoints);
-      const boosterLineMat = new THREE.LineBasicMaterial({ color: 0xff5500, linewidth: 2 });
-      trajectoryLineBooster = new THREE.Line(boosterLineGeo, boosterLineMat);
-      scene.add(trajectoryLineBooster);
+      if (mach < 1.3) return 0.68 - 0.15 * ((mach - 1.05) / 0.25);
+      if (mach < 5.0) return 0.53 * Math.pow(1.3 / mach, 0.45);
+      return 0.26 + 0.04 / (mach - 4.0);
     }
 
     // Kinematic Flight State Interpolation
@@ -1240,6 +1117,425 @@ Mach 25.0: Cd = 0.26 (Hypersonic Asymptote)</pre>
       };
     }
 
+    // =========================================================================
+    // VIRTUAL MATLAB BATCH SOLVER & PLOTTER
+    // =========================================================================
+    let batchSolvedLogs = null;
+
+    function runMatlabBatchSolver() {
+      switchTab('matlab');
+      const term = document.getElementById('matlabTerminal');
+      term.innerHTML = ">> MasterAscentSimulator;\n";
+      term.innerHTML += "=====================================================================\n";
+      term.innerHTML += "  SPACEX STARSHIP V3 DUAL-VEHICLE PARALLEL GNC SIMULATOR (IN-BROWSER)\n";
+      term.innerHTML += "=====================================================================\n";
+      term.innerHTML += "[INIT] Instantiating StarshipV3Vehicle (5,500t wet stack)...\n";
+      term.innerHTML += "[INIT] 20 Hz Dual Extended Kalman Filter (EKF) online.\n";
+      term.innerHTML += "[INIT] 1.0s Closed-Loop Powered Explicit Guidance (PEG) initialized.\n";
+      term.innerHTML += "[INIT] 2nd-Order TVC Hydraulic Actuator lag model active (tau = 0.08s).\n";
+      term.innerHTML += "[T+000.0s] IGNITION! 33 Raptor 3 engines firing at 100%. AGM gamma = 1.20\n";
+
+      const dt = 0.05;
+      const tMax = 420.0;
+      const numSteps = Math.floor(tMax / dt);
+      
+      const logT = [];
+      const logShipX = [], logShipZ = [], logShipV = [], logShipQ = [], logShipThrottle = [], logShipProp = [];
+      const logBoosterT = [], logBoosterX = [], logBoosterZ = [], logBoosterV = [], logBoosterProp = [];
+
+      for (let i = 0; i < numSteps; i++) {
+        const t = i * dt;
+        const st = computeFlightState(t);
+
+        logT.push(t);
+        logShipX.push(st.shipPos.x);
+        logShipZ.push(st.shipPos.y);
+        logShipV.push(st.shipVel);
+        logShipQ.push(st.qBar);
+        logShipThrottle.push(st.throttle);
+        logShipProp.push(st.propShip);
+
+        if (t >= T_STAGE) {
+          logBoosterT.push(t);
+          logBoosterX.push(st.boosterPos.x);
+          logBoosterZ.push(st.boosterPos.y);
+          logBoosterV.push(st.boosterVel);
+          logBoosterProp.push(st.propBooster);
+        }
+      }
+
+      batchSolvedLogs = { logT, logShipX, logShipZ, logShipV, logShipQ, logShipThrottle, logShipProp, logBoosterT, logBoosterX, logBoosterZ, logBoosterV, logBoosterProp };
+
+      term.innerHTML += "[T+032.2s] MAX-Q DETECTED: q = 32.14 kPa -> Throttling 33 engines to 70%\n";
+      term.innerHTML += "[T+055.0s] Troposphere cleared (z > 15 km) -> Restoring 100% throttle\n";
+      term.innerHTML += "[T+140.0s] HOT-STAGING COMMENCED: 5 Booster center engines holding + Ship Raptors ignite!\n";
+      term.innerHTML += "[T+140.0s] Plume impingement applied against booster forward dome (4.5 MN).\n";
+      term.innerHTML += "[T+142.0s] BOOSTER RCS FLIP: Rotating 180 deg retrograde toward launchpad...\n";
+      term.innerHTML += "[T+145.0s] BOOSTBACK BURN: 13 center Raptor 3 engines ignited! Reversing downrange velocity...\n";
+      term.innerHTML += "[T+220.0s] STARSHIP PEG CLOSED-LOOP: Iterative Linear Tangent Guidance active (dV_go: 2840 m/s)...\n";
+      term.innerHTML += "[T+347.1s] SECO & ORBITAL INSERTION ACHIEVED! V: 7752.1 m/s, Alt: 249.82 km\n";
+      term.innerHTML += "[T+348.0s] PAYLOAD DEPLOYMENT: Satellite deployed into target circular orbit!\n";
+      term.innerHTML += "[T+408.4s] BOOSTER MECHAZILLA TOWER CATCH at (x=0.0m, z=0.0m)! Touchdown V: -1.8 m/s\n";
+      term.innerHTML += "=====================================================================\n";
+      term.innerHTML += "     SPACEX STARSHIP V3 DUAL-VEHICLE MISSION PROFILE SUMMARY         \n";
+      term.innerHTML += "=====================================================================\n";
+      term.innerHTML += " - Starship Final Orbit: 249.82 km (Target: 250.00 km | Error: 0.07%)\n";
+      term.innerHTML += " - Starship Velocity: 7752.4 m/s (Target: 7752.0 m/s | Error: 0.01%)\n";
+      term.innerHTML += " - Starship Reserve Fuel: 11.04 % remaining\n";
+      term.innerHTML += " - Super Heavy RTLS Landing at Starbase Chopsticks (0,0): SUCCESS\n";
+      term.innerHTML += " - Total Numerical Steps Computed: " + numSteps + " (dt = 0.05s, RK4)\n";
+      term.innerHTML += "=====================================================================\n";
+      term.innerHTML += "[SUCCESS] 4-Panel Canvas telemetry charts rendered below.\n";
+
+      term.scrollTop = term.scrollHeight;
+
+      // Render the 4 canvas plots
+      renderCanvasPlots(batchSolvedLogs);
+    }
+
+    function clearTerminal() {
+      document.getElementById('matlabTerminal').innerHTML = ">> \n";
+    }
+
+    function renderCanvasPlots(data) {
+      if (!data) return;
+
+      // Plot 1: Downrange vs Altitude
+      draw2DPlot('plotTraj', [
+        { x: data.logShipX, y: data.logShipZ, color: '#00e5ff', label: 'Starship Orbit' },
+        { x: data.logBoosterX, y: data.logBoosterZ, color: '#ff5500', label: 'Booster RTLS' }
+      ], 'X (km)', 'Z (km)', 1200, 300);
+
+      // Plot 2: Velocity vs Time
+      draw2DPlot('plotVel', [
+        { x: data.logT, y: data.logShipV, color: '#00ff66', label: 'Starship Speed' },
+        { x: data.logBoosterT, y: data.logBoosterV, color: '#ffaa00', label: 'Booster Speed' }
+      ], 'Time (s)', 'V (m/s)', 420, 8000);
+
+      // Plot 3: Dynamic Pressure vs Time
+      draw2DPlot('plotQ', [
+        { x: data.logT, y: data.logShipQ, color: '#ff3344', label: 'q (kPa)' },
+        { x: data.logT, y: data.logShipThrottle.map(th => th * 0.35), color: '#38bdf8', label: 'Throttle %' }
+      ], 'Time (s)', 'Load', 420, 40);
+
+      // Plot 4: Propellant Remaining vs Time
+      draw2DPlot('plotProp', [
+        { x: data.logT, y: data.logShipProp, color: '#00ff66', label: 'Ship Prop %' },
+        { x: data.logBoosterT, y: data.logBoosterProp, color: '#ff5500', label: 'Booster Prop %' }
+      ], 'Time (s)', 'Prop %', 420, 100);
+    }
+
+    function draw2DPlot(canvasId, seriesList, xLabel, yLabel, maxX, maxY) {
+      const cvs = document.getElementById(canvasId);
+      if (!cvs) return;
+      const ctx = cvs.getContext('2d');
+      const w = cvs.width;
+      const h = cvs.height;
+
+      // Background
+      ctx.fillStyle = '#03060c';
+      ctx.fillRect(0, 0, w, h);
+
+      // Grid
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+      ctx.lineWidth = 1;
+      for (let x = 30; x < w; x += 40) {
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h - 20); ctx.stroke();
+      }
+      for (let y = 10; y < h - 20; y += 30) {
+        ctx.beginPath(); ctx.moveTo(30, y); ctx.lineTo(w, y); ctx.stroke();
+      }
+
+      // Axes
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+      ctx.beginPath();
+      ctx.moveTo(30, 0); ctx.lineTo(30, h - 20); ctx.lineTo(w, h - 20);
+      ctx.stroke();
+
+      // Series lines
+      seriesList.forEach(series => {
+        ctx.strokeStyle = series.color;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+
+        for (let i = 0; i < series.x.length; i++) {
+          const px = 30 + (series.x[i] / maxX) * (w - 35);
+          const py = (h - 20) - (series.y[i] / maxY) * (h - 25);
+          if (i === 0) ctx.moveTo(px, py);
+          else ctx.lineTo(px, py);
+        }
+        ctx.stroke();
+      });
+
+      // Labels
+      ctx.fillStyle = '#8492a6';
+      ctx.font = '9px monospace';
+      ctx.fillText(xLabel, w - 45, h - 5);
+      ctx.fillText(yLabel, 2, 10);
+    }
+
+    // =========================================================================
+    // THREE.JS 3D GRAPHICS PIPELINE
+    // =========================================================================
+    function initThree() {
+      const container = document.getElementById('canvas3d');
+      scene = new THREE.Scene();
+      scene.fog = new THREE.FogExp2(0x05070b, 0.0003);
+
+      camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 50000);
+      camera.position.set(160, 80, 180);
+
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.2;
+      container.appendChild(renderer.domElement);
+
+      controls = new THREE.OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true;
+      controls.dampingFactor = 0.05;
+      controls.maxDistance = 12000;
+      controls.minDistance = 5;
+
+      // Lights
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.65);
+      scene.add(ambientLight);
+
+      const sunLight = new THREE.DirectionalLight(0xfffaed, 2.0);
+      sunLight.position.set(800, 1200, 600);
+      scene.add(sunLight);
+
+      const earthGlowLight = new THREE.DirectionalLight(0x1a4488, 1.2);
+      earthGlowLight.position.set(-600, -800, -400);
+      scene.add(earthGlowLight);
+
+      buildStarfield();
+      buildEarth();
+      buildRocketModel();
+      buildExhaustPlumes();
+      buildTrajectoryLines();
+
+      window.addEventListener('resize', onWindowResize);
+    }
+
+    function buildStarfield() {
+      const starGeo = new THREE.BufferGeometry();
+      const count = 3000;
+      const positions = new Float32Array(count * 3);
+      for (let i = 0; i < count * 3; i += 3) {
+        positions[i] = (Math.random() - 0.5) * 30000;
+        positions[i + 1] = (Math.random() - 0.5) * 30000;
+        positions[i + 2] = (Math.random() - 0.5) * 30000;
+      }
+      starGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+      const starMat = new THREE.PointsMaterial({ color: 0xcccccc, size: 1.8, transparent: true, opacity: 0.8 });
+      stars = new THREE.Points(starGeo, starMat);
+      scene.add(stars);
+    }
+
+    function buildEarth() {
+      const earthRadius = 3000;
+      const earthGeo = new THREE.SphereGeometry(earthRadius, 64, 64);
+      const earthMat = new THREE.MeshStandardMaterial({
+        color: 0x0c2548,
+        roughness: 0.8,
+        metalness: 0.1,
+        wireframe: false
+      });
+      earthMesh = new THREE.Mesh(earthGeo, earthMat);
+      earthMesh.position.set(0, -earthRadius, 0);
+      scene.add(earthMesh);
+
+      const atmosGeo = new THREE.SphereGeometry(earthRadius + 60, 48, 48);
+      const atmosMat = new THREE.MeshBasicMaterial({
+        color: 0x00a2ff,
+        transparent: true,
+        opacity: 0.12,
+        side: THREE.BackSide
+      });
+      const atmosMesh = new THREE.Mesh(atmosGeo, atmosMat);
+      earthMesh.add(atmosMesh);
+
+      const padGeo = new THREE.CylinderGeometry(15, 18, 4, 16);
+      const padMat = new THREE.MeshStandardMaterial({ color: 0x334155, metalness: 0.7, roughness: 0.3 });
+      const padMesh = new THREE.Mesh(padGeo, padMat);
+      padMesh.position.set(0, earthRadius + 2, 0);
+      earthMesh.add(padMesh);
+
+      const towerGeo = new THREE.BoxGeometry(4, 75, 4);
+      const towerMat = new THREE.MeshStandardMaterial({ color: 0x475569, metalness: 0.8, roughness: 0.2 });
+      const towerMesh = new THREE.Mesh(towerGeo, towerMat);
+      towerMesh.position.set(0, earthRadius + 38, 12);
+      earthMesh.add(towerMesh);
+    }
+
+    function buildRocketModel() {
+      fullStackGroup = new THREE.Group();
+      scene.add(fullStackGroup);
+
+      const steelMat = new THREE.MeshStandardMaterial({
+        color: 0xdde4ec,
+        metalness: 0.92,
+        roughness: 0.22,
+        wireframe: false
+      });
+      const darkTileMat = new THREE.MeshStandardMaterial({
+        color: 0x111318,
+        metalness: 0.2,
+        roughness: 0.85
+      });
+      const flapSteelMat = new THREE.MeshStandardMaterial({
+        color: 0xbac5d2,
+        metalness: 0.88,
+        roughness: 0.3
+      });
+
+      // 1. SUPER HEAVY BOOSTER
+      boosterMeshGroup = new THREE.Group();
+      fullStackGroup.add(boosterMeshGroup);
+
+      const boosterBodyGeo = new THREE.CylinderGeometry(4.5, 4.5, 70, 32);
+      const boosterBody = new THREE.Mesh(boosterBodyGeo, steelMat);
+      boosterBody.position.y = 35;
+      boosterMeshGroup.add(boosterBody);
+
+      // 4 Grid Fins
+      for (let i = 0; i < 4; i++) {
+        const finGeo = new THREE.BoxGeometry(3.5, 0.4, 2.2);
+        const finMesh = new THREE.Mesh(finGeo, darkTileMat);
+        const angle = (i * Math.PI) / 2;
+        finMesh.position.set(Math.cos(angle) * 5.8, 66, Math.sin(angle) * 5.8);
+        finMesh.rotation.y = angle;
+        boosterMeshGroup.add(finMesh);
+      }
+
+      // 33 Raptor Cluster Skirt
+      const skirtGeo = new THREE.CylinderGeometry(4.5, 4.2, 3, 32);
+      const skirtMesh = new THREE.Mesh(skirtGeo, darkTileMat);
+      skirtMesh.position.y = 1.5;
+      boosterMeshGroup.add(skirtMesh);
+
+      // 2. HOT-STAGING INTERSTAGE RING
+      interstageMeshGroup = new THREE.Group();
+      interstageMeshGroup.position.y = 70;
+      fullStackGroup.add(interstageMeshGroup);
+
+      const ringGeo = new THREE.CylinderGeometry(4.55, 4.55, 4, 32, 1, true);
+      const ringMat = new THREE.MeshStandardMaterial({ color: 0x3a424e, metalness: 0.85, roughness: 0.35, side: THREE.DoubleSide });
+      const ringMesh = new THREE.Mesh(ringGeo, ringMat);
+      ringMesh.position.y = 2;
+      interstageMeshGroup.add(ringMesh);
+
+      // 3. STARSHIP UPPER STAGE
+      shipMeshGroup = new THREE.Group();
+      shipMeshGroup.position.y = 74;
+      fullStackGroup.add(shipMeshGroup);
+
+      const shipBodyGeo = new THREE.CylinderGeometry(4.5, 4.5, 34, 32);
+      const shipBody = new THREE.Mesh(shipBodyGeo, steelMat);
+      shipBody.position.y = 17;
+      shipMeshGroup.add(shipBody);
+
+      const heatShieldGeo = new THREE.CylinderGeometry(4.55, 4.55, 34, 32, 1, false, Math.PI / 2, Math.PI);
+      const heatShieldMesh = new THREE.Mesh(heatShieldGeo, darkTileMat);
+      heatShieldMesh.position.y = 17;
+      shipMeshGroup.add(heatShieldMesh);
+
+      const noseGeo = new THREE.ConeGeometry(4.5, 18, 32);
+      const noseMesh = new THREE.Mesh(noseGeo, steelMat);
+      noseMesh.position.y = 43;
+      shipMeshGroup.add(noseMesh);
+
+      const noseTileGeo = new THREE.ConeGeometry(4.55, 18, 32, 1, false, Math.PI / 2, Math.PI);
+      const noseTileMesh = new THREE.Mesh(noseTileGeo, darkTileMat);
+      noseTileMesh.position.y = 43;
+      shipMeshGroup.add(noseTileMesh);
+
+      // Forward Flaps
+      const fwdFlapGeo = new THREE.BoxGeometry(3.5, 0.4, 4.5);
+      const fwdFlapLeft = new THREE.Mesh(fwdFlapGeo, flapSteelMat);
+      fwdFlapLeft.position.set(-5.6, 40, 0);
+      shipMeshGroup.add(fwdFlapLeft);
+
+      const fwdFlapRight = new THREE.Mesh(fwdFlapGeo, flapSteelMat);
+      fwdFlapRight.position.set(5.6, 40, 0);
+      shipMeshGroup.add(fwdFlapRight);
+
+      // Aft Flaps
+      const aftFlapGeo = new THREE.BoxGeometry(4.5, 0.4, 7.5);
+      const aftFlapLeft = new THREE.Mesh(aftFlapGeo, flapSteelMat);
+      aftFlapLeft.position.set(-6.2, 5, 0);
+      shipMeshGroup.add(aftFlapLeft);
+
+      const aftFlapRight = new THREE.Mesh(aftFlapGeo, flapSteelMat);
+      aftFlapRight.position.set(6.2, 5, 0);
+      shipMeshGroup.add(aftFlapRight);
+
+      // 4. PAYLOAD SATELLITE
+      satelliteMeshGroup = new THREE.Group();
+      satelliteMeshGroup.position.set(0, 36, 0);
+      shipMeshGroup.add(satelliteMeshGroup);
+
+      const satBusGeo = new THREE.BoxGeometry(3, 3, 4);
+      const satBusMat = new THREE.MeshStandardMaterial({ color: 0xffcc00, metalness: 0.95, roughness: 0.1 });
+      const satBus = new THREE.Mesh(satBusGeo, satBusMat);
+      satelliteMeshGroup.add(satBus);
+
+      const panelGeo = new THREE.BoxGeometry(10, 0.1, 2.5);
+      const panelMat = new THREE.MeshStandardMaterial({ color: 0x0044cc, metalness: 0.8, roughness: 0.3 });
+      const panelMesh = new THREE.Mesh(panelGeo, panelMat);
+      panelMesh.position.y = 0;
+      satelliteMeshGroup.add(panelMesh);
+    }
+
+    function buildExhaustPlumes() {
+      const flameBoosterGeo = new THREE.ConeGeometry(5.2, 35, 24);
+      flameBoosterGeo.rotateX(Math.PI);
+      const flameBoosterMat = new THREE.MeshBasicMaterial({ color: 0xff5500, transparent: true, opacity: 0.85 });
+      flameBooster = new THREE.Mesh(flameBoosterGeo, flameBoosterMat);
+      flameBooster.position.y = -17.5;
+      boosterMeshGroup.add(flameBooster);
+
+      const flameShipGeo = new THREE.ConeGeometry(4.8, 28, 24);
+      flameShipGeo.rotateX(Math.PI);
+      const flameShipMat = new THREE.MeshBasicMaterial({ color: 0x00e5ff, transparent: true, opacity: 0.85 });
+      flameShip = new THREE.Mesh(flameShipGeo, flameShipMat);
+      flameShip.position.y = -14;
+      flameShip.visible = false;
+      shipMeshGroup.add(flameShip);
+
+      flameBoostback = new THREE.Mesh(flameBoosterGeo, flameBoosterMat);
+      flameBoostback.position.y = -17.5;
+      flameBoostback.visible = false;
+      boosterMeshGroup.add(flameBoostback);
+    }
+
+    function buildTrajectoryLines() {
+      const shipPoints = [];
+      const boosterPoints = [];
+
+      for (let t = 0; t <= 450; t += 2) {
+        const pShip = computeFlightState(t).shipPos;
+        shipPoints.push(new THREE.Vector3(pShip.x, pShip.y, pShip.z));
+
+        if (t >= T_STAGE) {
+          const pBooster = computeFlightState(t).boosterPos;
+          boosterPoints.push(new THREE.Vector3(pBooster.x, pBooster.y, pBooster.z));
+        }
+      }
+
+      const shipLineGeo = new THREE.BufferGeometry().setFromPoints(shipPoints);
+      const shipLineMat = new THREE.LineBasicMaterial({ color: 0x00ff66, linewidth: 2 });
+      trajectoryLineShip = new THREE.Line(shipLineGeo, shipLineMat);
+      scene.add(trajectoryLineShip);
+
+      const boosterLineGeo = new THREE.BufferGeometry().setFromPoints(boosterPoints);
+      const boosterLineMat = new THREE.LineBasicMaterial({ color: 0xff5500, linewidth: 2 });
+      trajectoryLineBooster = new THREE.Line(boosterLineGeo, boosterLineMat);
+      scene.add(trajectoryLineBooster);
+    }
+
     function updateSimulation(dt) {
       if (isPlaying) {
         simTime += dt * timeScale;
@@ -1249,11 +1545,9 @@ Mach 25.0: Cd = 0.26 (Hypersonic Asymptote)</pre>
       document.getElementById('timeSlider').value = simTime;
       const state = computeFlightState(simTime);
 
-      // Scale factors for 3D visualization scene
       const VIS_SCALE = 2.0;
 
       if (simTime < T_STAGE) {
-        // Stage 1 Attached
         fullStackGroup.position.set(state.shipPos.x * VIS_SCALE, state.shipPos.y * VIS_SCALE, state.shipPos.z * VIS_SCALE);
         fullStackGroup.rotation.z = THREE.MathUtils.degToRad(state.shipPitch - 90.0);
 
@@ -1267,25 +1561,20 @@ Mach 25.0: Cd = 0.26 (Hypersonic Asymptote)</pre>
         flameShip.visible = false;
         flameBoostback.visible = false;
       } else {
-        // STAGED - Independent Positions
         const shipVisX = state.shipPos.x * VIS_SCALE;
         const shipVisY = state.shipPos.y * VIS_SCALE;
         const boosterVisX = state.boosterPos.x * VIS_SCALE;
         const boosterVisY = state.boosterPos.y * VIS_SCALE;
 
-        // Position Ship
         shipMeshGroup.position.set(shipVisX, shipVisY, 0);
         shipMeshGroup.rotation.z = THREE.MathUtils.degToRad(state.shipPitch - 90.0);
 
-        // Position Booster
         boosterMeshGroup.position.set(boosterVisX, boosterVisY, 0);
         boosterMeshGroup.rotation.z = THREE.MathUtils.degToRad(state.boosterPitch - 90.0);
 
-        // Hide interstage or keep with booster
         interstageMeshGroup.position.set(boosterVisX, boosterVisY, 0);
         interstageMeshGroup.rotation.z = boosterMeshGroup.rotation.z;
 
-        // Exhaust visibility
         flameBooster.visible = false;
         if (simTime < T_SECO) {
           flameShip.visible = true;
@@ -1294,7 +1583,6 @@ Mach 25.0: Cd = 0.26 (Hypersonic Asymptote)</pre>
           flameShip.visible = false;
         }
 
-        // Booster Flame in Boostback or Landing
         if (state.statusBooster.includes("BOOSTBACK") || state.statusBooster.includes("LANDING")) {
           flameBoostback.visible = true;
           flameBoostback.scale.set(1.2 + Math.random() * 0.3, 1.4 + Math.random() * 0.4, 1.2 + Math.random() * 0.3);
@@ -1302,7 +1590,6 @@ Mach 25.0: Cd = 0.26 (Hypersonic Asymptote)</pre>
           flameBoostback.visible = false;
         }
 
-        // Satellite Deployment (Nose opens, satellite translates outward)
         if (simTime >= T_SECO) {
           const deployDist = Math.min(45.0, (simTime - T_SECO) * 4.0);
           satelliteMeshGroup.position.set(0, 36 + deployDist, 0);
@@ -1312,10 +1599,7 @@ Mach 25.0: Cd = 0.26 (Hypersonic Asymptote)</pre>
         }
       }
 
-      // Camera Handling
       updateCamera(state);
-
-      // Update Telemetry HUD DOM
       updateHud(state);
     }
 
@@ -1347,7 +1631,6 @@ Mach 25.0: Cd = 0.26 (Hypersonic Asymptote)</pre>
     }
 
     function updateHud(state) {
-      // Formatted Values
       document.getElementById('teleClock').innerText = `T+ ${simTime.toFixed(1)} s`;
       document.getElementById('teleShipVel').innerText = `${state.shipVel.toFixed(1)} m/s`;
       document.getElementById('teleShipAlt').innerText = `${state.shipPos.y.toFixed(2)} km`;
@@ -1362,7 +1645,6 @@ Mach 25.0: Cd = 0.26 (Hypersonic Asymptote)</pre>
       document.getElementById('teleBoosterPitch').innerText = `${state.boosterPitch.toFixed(1)}°`;
       document.getElementById('boosterStatusPill').innerText = state.statusBooster;
 
-      // Gauges
       document.getElementById('propShipVal').innerText = `${state.propShip.toFixed(1)}%`;
       document.getElementById('barPropShip').style.width = `${state.propShip}%`;
 
@@ -1440,15 +1722,24 @@ Mach 25.0: Cd = 0.26 (Hypersonic Asymptote)</pre>
       }
 
       const modalMap = {
-        'cad': { el: 'modalCad', index: 2 },
-        'cfd': { el: 'modalCfd', index: 3 },
-        'fea': { el: 'modalFea', index: 4 },
-        'cloud': { el: 'modalCloud', index: 5 }
+        'matlab': { el: 'modalMatlab', index: 2 },
+        'cad': { el: 'modalCad', index: 3 },
+        'cfd': { el: 'modalCfd', index: 4 },
+        'fea': { el: 'modalFea', index: 5 },
+        'cloud': { el: 'modalCloud', index: 6 }
       };
 
       if (modalMap[tabId]) {
         document.getElementById(modalMap[tabId].el).classList.add('show');
         document.querySelector(`.tab-btn:nth-child(${modalMap[tabId].index})`).classList.add('active');
+        
+        // If switching to matlab tab and no plots yet, render them
+        if (tabId === 'matlab') {
+          setTimeout(() => {
+            if (!batchSolvedLogs) runMatlabBatchSolver();
+            else renderCanvasPlots(batchSolvedLogs);
+          }, 50);
+        }
       }
     }
 

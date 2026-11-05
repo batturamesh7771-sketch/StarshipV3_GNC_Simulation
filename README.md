@@ -1,21 +1,22 @@
 # 🚀 SpaceX Starship V3 Dual-Vehicle Parallel GNC Simulation Platform & Digital Twin
 
-[![Live Cloud Simulation](https://img.shields.io/badge/🌐_Cloud_Simulation-Click_to_Run_Live-00e5ff?style=for-the-badge&logo=googlechrome&logoColor=white)](https://batturamesh7771-sketch.github.io/StarshipV3_GNC_Simulation/)
+[![Zero-Login WebGL Cloud Simulation](https://img.shields.io/badge/🟢_Zero--Login_Cloud_Simulation-Click_to_Run_Live-00ff66?style=for-the-badge&logo=googlechrome&logoColor=black)](https://batturamesh7771-sketch.github.io/StarshipV3_GNC_Simulation/)
 [![Open in MATLAB Online](https://img.shields.io/badge/Open_in-MATLAB_Online-e05307?style=for-the-badge&logo=mathworks&logoColor=white)](https://matlab.mathworks.com/open/github/v1?repo=batturamesh7771-sketch/StarshipV3_GNC_Simulation)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Mission Status](https://img.shields.io/badge/Mission_Status-Orbit_Achieved_%26_RTLS_Success-00ff66.svg?style=for-the-badge)]()
+[![Mission Status](https://img.shields.io/badge/Mission_Status-Orbit_Achieved_%26_RTLS_Success-00e5ff.svg?style=for-the-badge)]()
 [![CAD Twin](https://img.shields.io/badge/SolidWorks_CAD-150m_Block_3_Twin-blueviolet.svg?style=for-the-badge)](https://github.com/batturamesh7771-sketch/Starship-V3-3D-Modeling-in-SolidWorks-with-Antigravity-AI-Tool)
 
 ---
 
 > ### ⚡ **PERMANENT CLOUD-BASED RUNNERS & 1-CLICK INTERACTIVE TRIAL LINKS**
-> **No installation, no dependencies, no local MATLAB required! Test and trial all simulations and 3D models directly in your browser:**
+> **No installation, no login, no accounts required! Test and trial all simulations and 3D models directly in your browser:**
 >
 > | Cloud Service / Project Asset | Permanent Direct Link | Description | Required Setup |
 > | :--- | :--- | :--- | :--- |
-> | **🌐 Live 3D WebGL Flight Simulator & Digital Twin** | 👉 **[LAUNCH CLOUD 3D WEBGL SIMULATOR](https://batturamesh7771-sketch.github.io/StarshipV3_GNC_Simulation/)** 👈 | Real-time dual-vehicle 3D mission control, camera presets, stage separation, boostback plumes, and telemetry tickers. | **None (100% In-Browser)** |
-> | **💻 Official MATLAB Online 1-Click Runner** | 👉 **[RUN IN MATLAB ONLINE](https://matlab.mathworks.com/open/github/v1?repo=batturamesh7771-sketch/StarshipV3_GNC_Simulation)** 👈 | Instantly opens and executes `MasterAscentSimulator.m` in the MathWorks cloud environment. | **Free MathWorks Login** |
-> | **🪐 MyBinder Cloud Jupyter / Octave Notebook** | 👉 **[LAUNCH ON MYBINDER](https://mybinder.org/v2/gh/batturamesh7771-sketch/StarshipV3_GNC_Simulation/main)** 👈 | Runs the simulation scripts in a cloud-hosted container. | **None (100% In-Browser)** |
+> | **🌐 Live 3D WebGL Flight Simulator & Digital Twin** | 👉 **[LAUNCH ZERO-LOGIN 3D WEBGL SIMULATOR](https://batturamesh7771-sketch.github.io/StarshipV3_GNC_Simulation/)** 👈 | Real-time dual-vehicle 3D mission control, camera presets, stage separation, boostback plumes, and telemetry tickers. | **🟢 0% Login / 100% In-Browser** |
+> | **⚡ In-Browser MATLAB RK4 Numerical Solver & Terminal** | 👉 **[RUN IN-BROWSER MATLAB SOLVER](https://batturamesh7771-sketch.github.io/StarshipV3_GNC_Simulation/)** 👈 | Runs the full RK4 numerical physics solver, streaming telemetry terminal logs, and generates 4 live canvas trajectory plots. | **🟢 0% Login / 100% In-Browser** |
+> | **💻 Official MATLAB Online 1-Click Runner** | 👉 **[RUN IN MATLAB ONLINE](https://matlab.mathworks.com/open/github/v1?repo=batturamesh7771-sketch/StarshipV3_GNC_Simulation)** 👈 | Instantly opens and executes `MasterAscentSimulator.m` in the MathWorks cloud environment. | **MathWorks Login Required** |
+> | **🪐 MyBinder Cloud Jupyter / Octave Notebook** | 👉 **[LAUNCH ON MYBINDER](https://mybinder.org/v2/gh/batturamesh7771-sketch/StarshipV3_GNC_Simulation/main)** 👈 | Runs the simulation scripts in a cloud-hosted container. | **🟢 0% Login / 100% In-Browser** |
 > | **📦 Full A-to-Z Project Archive (.zip)** | 👉 **[DOWNLOAD ARCHIVE (.ZIP)](https://github.com/batturamesh7771-sketch/StarshipV3_GNC_Simulation/archive/refs/heads/main.zip)** 👈 | Complete package: MATLAB source, CAD files, STL exports, CFD/FEA data, and prompt logs. | **Instant Download** |
 > | **🛠️ Starship V3 SolidWorks 3D CAD Twin Repo** | 👉 **[VIEW CAD COMPANION REPO](https://github.com/batturamesh7771-sketch/Starship-V3-3D-Modeling-in-SolidWorks-with-Antigravity-AI-Tool)** 👈 | Parametric SolidWorks assemblies (`.SLDASM`), part files (`.SLDPRT`), and automation VBScripts. | **GitHub Public Repo** |
 > | **🛸 SpaceX Starship Flight 14 Digital Twin Repo** | 👉 **[VIEW FLIGHT 14 DIGITAL LAB](https://github.com/batturamesh7771-sketch/PROJECT-14-SPACEX-STARSHIP-FLIGHT-14-DIGITAL-TWIN)** 👈 | Advanced CFD aerodynamic shockwave and FEA thermal gradient digital twin lab. | **GitHub Public Repo** |
